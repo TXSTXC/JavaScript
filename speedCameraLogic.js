@@ -78,9 +78,15 @@ else if (roadType === "national"){
 const button = document.getElementById("registration-button");
 const form = document.getElementById("registration-form");
 
-//This adds an Event Listener to the button, which, on click, removes the class of hidden from the form.
+/*
+This adds an Event Listener to the button, which, on click, removes the class of hidden from the form.
+I created the button as a constant above, then referenced it below, with the . notation. Rather than having to use the 
+document.getElementById.
+It now also changes the text to - This has changed!
+*/
 button.addEventListener("click", () => {
-        form.classList.remove("hidden");
+        form.classList.toggle("hidden");
+        document.getElementById("main-heading").innerHTML = "This has changed!";
     }
 );
     
