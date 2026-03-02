@@ -4,6 +4,7 @@
 
 // JavaScript test - SPEED CAMERA
 // I want the camera to be able to check the speed + 10% to allow for human error, so I need to calculate the speed limit + 10%
+alert("This is a page alert, please close to continue.");
 
 let speed = 31;
 
@@ -71,6 +72,19 @@ else if (roadType === "national"){
         console.log ("criminalSpeedingMessage");
     }
 }
+
+// WEBSITE LOGIC BELOW
+
+const button = document.getElementById("registration-button");
+const form = document.getElementById("registration-form");
+
+//This adds an Event Listener to the button, which, on click, removes the class of hidden from the form.
+button.addEventListener("click", () => {
+        form.classList.remove("hidden");
+    }
+);
+    
+
 
 
 

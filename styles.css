@@ -1,0 +1,15 @@
+/*Class Based Styling*/
+
+.hidden{
+    display:none;
+}
+h1{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+
+/* ID BASED STYLING */
