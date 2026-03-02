@@ -8,64 +8,73 @@ alert("This is a page alert, please close to continue.");
 
 let speed = 31;
 
-const nationalSpeedLimit = 70;
-const standardSpeedLimit = 30;
-const schoolSpeedLimit = 20;
+const speedLimit = {
+    nationalSpeedLimit: 70,
+    standardSpeedLimit: 30,
+    schoolSpeedLimit: 20
+}
 
 const speedTolerance = 0.1; // 10% tolerance
 
-const nationalSpeedLimitTolerance = nationalSpeedLimit + (nationalSpeedLimit * speedTolerance);
-const standardSpeedLimitTolerance = standardSpeedLimit + (standardSpeedLimit * speedTolerance);
-const schoolSpeedLimitTolerance = schoolSpeedLimit + (schoolSpeedLimit * speedTolerance);
-const criminalSpeedingLimit = {
-    nationalSpeedLimitCriminal: nationalSpeedLimit * 0.3,
-    standardSpeedLimitCriminal: standardSpeedLimit * 0.3,
-    schoolSpeedLimitCriminal: schoolSpeedLimit * 0.3
+const speedLimitTolerance = {
+    nationalSpeedLimitTolerance: speedLimit.nationalSpeedLimit + (speedLimit.nationalSpeedLimit * speedTolerance),
+    standardSpeedLimitTolerance: speedLimit.standardSpeedLimit + (speedLimit.standardSpeedLimit * speedTolerance),
+    schoolSpeedLimitTolerance: speedLimit.schoolSpeedLimit + (speedLimit.schoolSpeedLimit * speedTolerance)
 };
 
-let roadType = "school"; // This can be "national", "standard", or "school"
+const criminalSpeedingLimit = {
+    nationalSpeedLimitCriminal: speedLimit.nationalSpeedLimit * 0.3,
+    standardSpeedLimitCriminal: speedLimit.standardSpeedLimit * 0.3,
+    schoolSpeedLimitCriminal: speedLimit.schoolSpeedLimit * 0.3
+};
+
+const roadType = {
+    school: "school",
+    standard: "standard",
+    national: "national"
+}
 
 let legalSpeedMessage = "You are not breaking any speed limits, keep driving safely!";
 let toleranceSpeedMessage = "You are breaking the " + roadType + " speed limit! Please slow down!";
-let speedingMessage = "You are above the " + roadType + " speed limit threshold of " + schoolSpeedLimitTolerance + ". You will be receiving a fine through the post in due course. Please slow down and drive safely!";
+let speedingMessage = "You are above the " + roadType + " speed limit threshold. You will be receiving a fine through the post in due course. Please slow down and drive safely!";
 let criminalSpeedingMessage = "You are now travelling at " + speed +"which is within the criminal threshold for " + roadType + "roads. You should expect a fine and possibly a driving ban. Please slow down and drive safely!";
 
-if (roadType === "school"){
-    if (speed <= schoolSpeedLimit){
+if (roadType.school){
+    if (speed <= speedLimit.schoolSpeedLimit){
     console.log("legalSpeedMessage");
     }
-    else if (speed > schoolSpeedLimit && speed <= schoolSpeedLimitTolerance){
+    else if (speed > speedLimit.schoolSpeedLimit && speed <= speedLimitTolerance.schoolSpeedLimitTolerance){
     console.log("toleranceSpeedMessage");
     }
-    else if (speed > schoolSpeedLimitTolerance && speed <= criminalSpeedingLimit.schoolSpeedLimitCriminal){
+    else if (speed > speedLimitTolerance.schoolSpeedLimitTolerance && speed <= criminalSpeedingLimit.schoolSpeedLimitCriminal){
         console.log ("speedingMessage");
     }
     else{
         console.log ("criminalSpeedingMessage");
     }
 }
-else if (roadType === "standard"){
-    if (speed <= standardSpeedLimit){
+else if (roadType.standard){
+    if (speed <= speedLimit.standardSpeedLimit){
     console.log("legalSpeedMessage");
     }
-    else if (speed > standardSpeedLimit && speed <= standardSpeedLimitTolerance){
+    else if (speed > speedLimit.standardSpeedLimit && speed <= speedLimitTolerance.standardSpeedLimitTolerance){
     console.log("toleranceSpeedMessage");
     }
-    else if (speed > standardSpeedLimitTolerance && speed <= criminalSpeedingLimit.standardSpeedLimitCriminal){
+    else if (speed > speedLimitTolerance.standardSpeedLimitTolerance && speed <= criminalSpeedingLimit.standardSpeedLimitCriminal){
         console.log ("speedingMessage");
     }
     else{
         console.log ("criminalSpeedingMessage");
     }
 }
-else if (roadType === "national"){
-    if (speed <= nationalSpeedLimit){
+else if (roadType.national){
+    if (speed <= speedLimit.nationalSpeedLimit){
     console.log("legalSpeedMessage");
     }
-    else if (speed > nationalSpeedLimit && speed <= nationalSpeedLimitTolerance){
+    else if (speed > speedLimit.nationalSpeedLimit && speed <= speedLimitTolerance.nationalSpeedLimitTolerance){
     console.log("toleranceSpeedMessage");
     }
-    else if (speed > nationalSpeedLimitTolerance && speed <= criminalSpeedingLimit.nationalSpeedLimitCriminal){
+    else if (speed > speedLimitTolerance.nationalSpeedLimitTolerance && speed <= criminalSpeedingLimit.nationalSpeedLimitCriminal){
         console.log ("speedingMessage");
     }
     else{
@@ -87,9 +96,41 @@ It now also changes the text to - This has changed!
 button.addEventListener("click", () => {
         form.classList.toggle("hidden");
         document.getElementById("main-heading").innerHTML = "This has changed!";
+        console.log("The H1 text has now changed, and the REG entry field has become visible. If the REG entry box is not visibile, this button has been clicked multiple times.");
     }
 );
     
+
+//Testing an array creation
+
+let textFood = "";
+let textNum = "";
+
+let myFood = [
+    "sausages",
+    "eggs",
+    "butter",
+    "milk"
+]
+let myNumbers = [
+    1,
+    2,
+    3,
+    4,
+    5
+]
+
+for (let i = 0; i < myFood.length; i++){
+    textFood = textFood + myFood[i];
+    console.log(textFood);
+};
+
+for (let i = 0; i < myNumbers.length; i++){
+    textNum = textNum = myNumbers[i];
+    console.log(textNum);
+}
+
+
 
 
 
