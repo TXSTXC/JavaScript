@@ -86,6 +86,7 @@ else if (roadType.national){
 
 const button = document.getElementById("registration-button");
 const form = document.getElementById("registration-form");
+const submitButton = document.getElementById("submit");
 
 /*
 This adds an Event Listener to the button, which, on click, removes the class of hidden from the form.
@@ -100,6 +101,11 @@ button.addEventListener("click", () => {
     }
 );
     
+submitButton.addEventListener("click", () => {
+        const vrn = document.getElementById("registration-plate").value;
+        console.log(vrn);
+    }
+);
 
 //Testing an array creation
 
