@@ -51,7 +51,7 @@ const button = document.getElementById("registration-button");
 const form = document.getElementById("registration-form","decision");
 button.addEventListener("click", () => {
         form.classList.toggle("hidden");
-        document.getElementById("main-heading").innerHTML = "This has changed!";
+        //document.getElementById("main-heading").innerHTML = "This has changed!";
         console.log("The H1 text has now changed, and the REG entry field has become visible. If the REG entry box is not visibile, this button has been clicked multiple times.");
     }
 );
@@ -59,7 +59,7 @@ button.addEventListener("click", () => {
 
     //SUBMIT Button + Random Number Logic & Output
     const submitButton = document.getElementById("submit");
-    submitButton.addEventListener("click", (event,randomNum1,randomNum2) => {
+    submitButton.addEventListener("click", (event) => {
     //stops page reload
     event.preventDefault();
     //Gets REG value
@@ -71,9 +71,8 @@ button.addEventListener("click", () => {
         randomNum1 = Math.floor(Math.random() * 120);
         randomNum2 = Math.floor(Math.random() * 120);
         console.log(randomNum1);
-        console.log(randomNum2);
+        console.log(randomNum2);    
         
-    
         if(randomNum2 >= 0 && randomNum2 <= speedLimitTolerance.schoolSpeedLimitTolerance){
             roadOutput = roadType.school;
         }
@@ -88,7 +87,7 @@ button.addEventListener("click", () => {
         );
 
     const decisionButton = document.getElementById("decision")
-    decisionButton.addEventListener("click",(event,roadOutput) => {
+    decisionButton.addEventListener("click",(event) => {
             
            //Decides output to user
            event.preventDefault();
@@ -105,7 +104,7 @@ button.addEventListener("click", () => {
             else if (randomNum1 > speedLimit.schoolSpeedLimit && randomNum1 <= speedLimitTolerance.schoolSpeedLimitTolerance){
                 document.getElementById("decision-message").innerHTML = `${toleranceSpeedMessage}`;
             }
-            else if (speed > speedLimitTolerance.schoolSpeedLimitTolerance && randomNum1 <= criminalSpeedingLimit.schoolSpeedLimitCriminal){
+            else if (randomNum1 > speedLimitTolerance.schoolSpeedLimitTolerance && randomNum1 <= criminalSpeedingLimit.schoolSpeedLimitCriminal){
                 document.getElementById("decision-message").innerHTML = `${speedingMessage}`;
             }
             else{
@@ -113,13 +112,13 @@ button.addEventListener("click", () => {
             }
         }
         else if (roadOutput == roadType.standard){
-            if (speed <= speedLimit.standardSpeedLimit){
+            if (randomNum1 <= speedLimit.standardSpeedLimit){
             document.getElementById("decision-message").innerHTML = `${legalSpeedMessage}`;
             }
-            else if (speed > speedLimit.standardSpeedLimit && randomNum1 <= speedLimitTolerance.standardSpeedLimitTolerance){
+            else if (randomNum1 > speedLimit.standardSpeedLimit && randomNum1 <= speedLimitTolerance.standardSpeedLimitTolerance){
             document.getElementById("decision-message").innerHTML = `${speedingMessage}`;
             }
-            else if (speed > speedLimitTolerance.standardSpeedLimitTolerance && randomNum1 <= criminalSpeedingLimit.standardSpeedLimitCriminal){
+            else if (randomNum1 > speedLimitTolerance.standardSpeedLimitTolerance && randomNum1 <= criminalSpeedingLimit.standardSpeedLimitCriminal){
                 document.getElementById("decision-message").innerHTML = `${speedingMessage}`;
             }
             else{
@@ -127,13 +126,13 @@ button.addEventListener("click", () => {
             }
         }
         else if (roadOutput == roadType.national){
-            if (speed <= speedLimit.nationalSpeedLimit){
+            if (randomNum1 <= speedLimit.nationalSpeedLimit){
             document.getElementById("decision-message").innerHTML = `${legalSpeedMessage}`;
             }
-            else if (speed > speedLimit.nationalSpeedLimit && randomNum1 <= speedLimitTolerance.nationalSpeedLimitTolerance){
+            else if (randomNum1 > speedLimit.nationalSpeedLimit && randomNum1 <= speedLimitTolerance.nationalSpeedLimitTolerance){
             document.getElementById("decision-message").innerHTML = `${speedingMessage}`;
             }
-            else if (speed > speedLimitTolerance.nationalSpeedLimitTolerance && randomNum1 <= criminalSpeedingLimit.nationalSpeedLimitCriminal){
+            else if (randomNum1 > speedLimitTolerance.nationalSpeedLimitTolerance && randomNum1 <= criminalSpeedingLimit.nationalSpeedLimitCriminal){
                 document.getElementById("decision-message").innerHTML = `${speedingMessage}`;
             }
             else{

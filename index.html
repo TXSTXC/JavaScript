@@ -11,24 +11,30 @@
     </head>
     <body>
 
-        <main>
+        <header class="header"></header>
+        <main class="container-col">
             <h1 id="main-heading">Speed Camera Website - Tracking your speed!</h1>
             <p>Have you been fined?<br>
             Easily check by clicking the button below:</p>
-            <button id="registration-button">ENTER REG</button>
+            <button id="registration-button" class="button">ENTER REG</button>
         </main>
 
         <!-- Registration Plate Input -->
         <form id="registration-form" class="hidden">
-            <input type="text" id="registration-plate" name="registration-plate">
-            <button type="button" id="submit" name="submit">SUBMIT REG</button>
+            <div class="container-col">
+                <input type="text" id="registration-plate" name="registration-plate">
+            <button type="button" id="submit" name="submit" class="button">SUBMIT REG</button>
+            </div>
+            
         </form>
-
+    <div class="container-col">
         <p id="reg-output-message"></p>
         <p id="speeding-message"></p>
+    </div>
+        
 
         <!-- View Decision Button -->
-            <button type="button" id="decision" name="decision">View Decision</button>
+            <button type="button" id="decision" name="decision" class="button">View Decision</button>
         <p id="decision-message"></p>
 
     <!--I want to build a random output generator based on road types, speed, and tolerance, to then display a message. -->
