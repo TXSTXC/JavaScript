@@ -21,12 +21,12 @@ const roadType = {
     national: "national"
 }
 
-const speedTolerance = 0.1; // 10% tolerance
+const speedTolerance = 1.1; // 10% tolerance
 
 const speedLimitTolerance = {
-    nationalSpeedLimitTolerance: speedLimit.nationalSpeedLimit + (speedLimit.nationalSpeedLimit * speedTolerance),
-    standardSpeedLimitTolerance: speedLimit.standardSpeedLimit + (speedLimit.standardSpeedLimit * speedTolerance),
-    schoolSpeedLimitTolerance: speedLimit.schoolSpeedLimit + (speedLimit.schoolSpeedLimit * speedTolerance)
+    nationalSpeedLimitTolerance: speedLimit.nationalSpeedLimit * speedTolerance,
+    standardSpeedLimitTolerance: speedLimit.standardSpeedLimit * speedTolerance,
+    schoolSpeedLimitTolerance: speedLimit.schoolSpeedLimit * speedTolerance
 };
 
 const criminalSpeedingLimit = {
@@ -68,11 +68,9 @@ button.addEventListener("click", () => {
 );
 
     //SUBMIT Button + Random Number Logic & Output
-
     let randomNum1;
     let randomNum2;
     let roadOutput;
-
 
     const submitButton = document.getElementById("submit");
 
@@ -113,12 +111,33 @@ button.addEventListener("click", () => {
         let toleranceSpeedMessage = `You are breaking the ${roadOutput} speed limit! Please slow down!`;
         let speedingMessage = `You are above the ${roadOutput} speed limit threshold. You will be receiving a fine through the post in due course. Please slow down and drive safely!`;
         let criminalSpeedingMessage = `You are now travelling at ${randomNum1} mph, which is within the criminal threshold for ${roadOutput} roads. You should expect a fine and possibly a driving ban. Please slow down and drive safely!`;
+    
+        // pick the correct limits based on road type
+        const currentSpeedLimit = speedLimit[roadOutput];
+        const currentRules = roadRules[roadOutput];
+
+        if (randomNum1 <= currentSpeedLimit) {
+            speedMessageFunction(legalSpeedMessage);
+        }
+        else if (randomNum1 <= currentRules.tolerance) {
+            speedMessageFunction(toleranceSpeedMessage);
+        }
+        else if (randomNum1 <= currentRules.criminal) {
+            speedMessageFunction(speedingMessage);
+        }
+        else {
+            speedMessageFunction(criminalSpeedingMessage);
+        }
 
         function speedMessageFunction(n) {
             document.getElementById("decision-message").innerHTML = `${n}`;
         }
+    }
 
+);
+    
 
+        /*
         if (roadOutput == roadType.school){
             if (randomNum1 <= speedLimit.schoolSpeedLimit){
                 speedMessageFunction(legalSpeedMessage);
@@ -163,7 +182,7 @@ button.addEventListener("click", () => {
         }
     } 
     );
-
+    */
 
 
 
