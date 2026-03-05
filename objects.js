@@ -49,4 +49,4 @@ const productList = [
     } 
 ];
 
-console.log(productList[0].name);
+console.log(productList[0].name, productList[0].price, productList[0].description);

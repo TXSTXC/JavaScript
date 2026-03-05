@@ -1,9 +1,10 @@
 
 
 body{
+    width:100%;
+    min-height: 100dvh;
     display:flex;
     flex-direction: column;
-    height: 500px;
     align-items: center;
     margin:0px;
 }
@@ -30,6 +31,12 @@ h1{
     width: 100%;
     background-image: url(./media/speed-tape.jpg);
 }
+.footer{
+    height: 50px;
+    width: 100%;
+    background-image: url(./media/speed-tape.jpg);
+    margin-top: auto;
+}
 .container-col{
     display: flex;
     flex-direction: column;
@@ -53,4 +60,11 @@ p{
 
 #registration-form{
     margin-top: 15px;
+}
+#police-logo{
+    width: 400px;
+}
+#camera{
+    width: 400px;
+    margin-bottom: 20px;
 }
