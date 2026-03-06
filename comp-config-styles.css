@@ -19,9 +19,6 @@ select{
     margin-left: auto;
     margin-right: 20px;
 }
-option{
-    color: #679fd366;
-}
 
 .width-container-col{
     width: 100%;
@@ -83,11 +80,18 @@ option{
 .selection-row-right{
     display: flex;
     justify-content:space-evenly;
+    align-items: center;
     width:30%;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: aliceblue;
     border-radius: 15px;
+}
+.selection-row-right-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 /* Links container centered horizontally */
 .header-links {
@@ -115,6 +119,14 @@ option{
     height:150px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+.product-price{
+    color: black;
+    font-weight: bold;
+}
+.product-desc{
+    color: black;
+    font-size: 0.9rem;
 }
 .underline{
     border-bottom: 1px solid aliceblue;

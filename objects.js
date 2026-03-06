@@ -11,9 +11,14 @@
 //Data stored in arrays to then be selected and create a PC (object) at the end of the process.
 
 
+let towerCaseOption;
+const towerCaseOptions = document.getElementById("towerCase");
 
+towerCaseOption.addEventListener = ("select", () =>{
+    
 
-
+}
+);
 
 
 
