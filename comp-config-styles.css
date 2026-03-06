@@ -1,0 +1,146 @@
+/* MAIN SELECTORS  */
+body{
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+select{
+    width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+option{
+    color: #679fd366;
+}
+
+.width-container-col{
+    width: 100%;
+    background-image: url(./media/comp-config-media/gaming-setup-wide-1.png);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-container-row {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center; /* vertical centering */
+    position: relative; /* needed for centering the links absolutely */
+}
+.width-container-row{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.select-container-col{
+    width: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-col{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-row{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.selection-row-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width:30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:#67ccd366;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.selection-row-right{
+    display: flex;
+    justify-content:space-evenly;
+    width:30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+/* Links container centered horizontally */
+.header-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* spacing between links */
+}
+.header-options{
+    color:white;
+    text-decoration:none;
+}
+.span-large-bold{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.icon{
+    height:30px;
+    width:30px;
+    margin-left: 50px;
+}
+.product-icon{
+    width: 150px;
+    height:150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.underline{
+    border-bottom: 1px solid aliceblue;
+}
+
+
+
+
+
+/*TEXT STYLING*/
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size:3rem;
+}
+.center{
+    text-align: center;
+}
+#header-logo{
+    height:75px;
+}
+#main-logo{
+    height: 300px;
+    border-radius: 25px;
+}
+
+
+

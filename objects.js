@@ -1,13 +1,15 @@
 
 //Computer Config Objects and Logic
-//Be able to pick from a dropdown list of components within categories, to eventually create a COmputer.
+//Be able to pick from a dropdown list of components within categories, to eventually create a Computer.
 //Each element will have a picture against it to also be poart of the final build for the user to view, before purchasing.
-//THis will probably be best across multiple pages rather than trying to do everything in a scrolling singular page.
+//This will probably be best across multiple pages rather than trying to do everything in a scrolling singular page.
 //Page 1 - Create the configuration of the PC.
 //Page 2 - Display the configuration output tot he user with images in templated places to showcase the build; depending on choice.
 
 
 //PAGE 1
+//Data stored in arrays to then be selected and create a PC (object) at the end of the process.
+
 
 
 
