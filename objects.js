@@ -16,34 +16,21 @@
 
 const towerCase = {
     razer:{
-            modelOne:{
-                price:59.99,
-                description: "xxxxx"
+            TomohawkATX:{
+                price:99.99,
+                description: "To build the ultimate gaming desktop, it begins with a frame that can support the performance within. Meet the Razer Tomahawk ATX."
             },
-            modelTwo: {
-                price: 99.90,
-                description: "xxxxx"
+    },
+    msi:{
+            magForge100R: {
+                price: 44.97,
+                description: " It's ready to cool off your mid-range build right out of the box!"
             }
     },
-    alienware:{
-            modelOne: {
-                price: 69.99,
-                description: "xxxxx"
-            },
-            modelTwo: {
-                price: 119.99,
-                description: "xxxxx"
-            
-        }
-    },
     coolermaster: {
-        modelOne: {
-            price: 44.99,
-            description: "xxxxx"
-        },
-        modelTwo: {
-            price: 75.99,
-            description: "xxxxx"
+        masterBoxTd500: {
+            price: 64.99,
+            description: "This MasterBox TD500 by Cooler Master in white has a classic defined look with a polygonal design."
         }
     }
 }
@@ -79,7 +66,7 @@ const motherboard = {
     }
 }
 
-
+let totalPrice = 0;
 
 //TOWER CASE
 const towerCaseOption = document.getElementById("towerCase");
@@ -95,17 +82,24 @@ towerCaseOption.addEventListener("change", () => {
     towercaseName.innerHTML = selection;
 
     if (selection === "RAZER"){
-        towercasePrice.innerHTML = `£${towerCase.razer.modelOne.price}`;
-        towercaseDesc.innerHTML = towerCase.razer.modelOne.description;
+        towercasePrice.innerHTML = `£${towerCase.razer.TomohawkATX.price}`;
+        towercaseDesc.innerHTML = towerCase.razer.TomohawkATX.description;
     }
-    else if(selection === "alienWare"){
-        towercasePrice.innerHTML = `£${towerCase.alienware.modelOne.price}`;
-        towercaseDesc.innerHTML = towerCase.alienware.modelOne.description;
+    else if(selection === "MSI"){
+        towercasePrice.innerHTML = `£${towerCase.msi.magForge100R.price}`;
+        towercaseDesc.innerHTML = towerCase.msi.magForge100R.description;
     }
     else if(selection === "CoolerMaster"){
-        towercasePrice.innerHTML = `£${towerCase.coolermaster.modelOne.price}`;
-        towercaseDesc.innerHTML = towerCase.coolermaster.modelOne.description;
+        towercasePrice.innerHTML = `£${towerCase.coolermaster.masterBoxTd500.price}`;
+        towercaseDesc.innerHTML = towerCase.coolermaster.masterBoxTd500.description;
     }
+    else{
+        towercaseName.innerHTML = ``
+        towercasePrice.innerHTML = ``;
+        towercaseDesc.innerHTML = ``;
+    }
+    totalPrice = totalPrice + selectedPrice; //Need to sort the lgoic here so it adds the individual cost, per section, into the total.
+
     });
 
 
