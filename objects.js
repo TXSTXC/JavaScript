@@ -11,14 +11,102 @@
 //Data stored in arrays to then be selected and create a PC (object) at the end of the process.
 
 
-let towerCaseOption;
-const towerCaseOptions = document.getElementById("towerCase");
 
-towerCaseOption.addEventListener = ("select", () =>{
-    
+//Product Info
 
+const towerCase = {
+    razer:{
+            modelOne:{
+                price:59.99,
+                description: "xxxxx"
+            },
+            modelTwo: {
+                price: 99.90,
+                description: "xxxxx"
+            }
+    },
+    alienware:{
+            modelOne: {
+                price: 69.99,
+                description: "xxxxx"
+            },
+            modelTwo: {
+                price: 119.99,
+                description: "xxxxx"
+            
+        }
+    },
+    coolermaster: {
+        modelOne: {
+            price: 44.99,
+            description: "xxxxx"
+        },
+        modelTwo: {
+            price: 75.99,
+            description: "xxxxx"
+        }
+    }
 }
-);
+
+const motherboard = {
+    asus:{
+        modelOne: {
+            ramSlots: 4,
+            price: 129.99,
+            description: "xxxxx"
+        },
+        modelTwo: {
+            ramSlots: 2,
+            price: 89.99,
+            description: "xxxxx"
+        }
+    },
+    intel:{
+        b760m:{
+            ramSlots: 4,
+            price: 239.95,
+            description: "xxxxx"
+        }
+        
+    },
+    amd:{
+        a520m:{
+            ramSlots: 4,
+            price: 134.95,
+            description: "xxxxx"
+        }
+        
+    }
+}
+
+
+
+//TOWER CASE
+const towerCaseOption = document.getElementById("towerCase");
+
+towerCaseOption.addEventListener("change", () => {
+
+    const selection = towerCaseOption.value;
+
+    let towercaseName = document.getElementById("towercase-name");
+    let towercasePrice = document.getElementById("towercase-price");
+    let towercaseDesc = document.getElementById("towercase-desc");
+
+    towercaseName.innerHTML = selection;
+
+    if (selection === "RAZER"){
+        towercasePrice.innerHTML = `£${towerCase.razer.modelOne.price}`;
+        towercaseDesc.innerHTML = towerCase.razer.modelOne.description;
+    }
+    else if(selection === "alienWare"){
+        towercasePrice.innerHTML = `£${towerCase.alienware.modelOne.price}`;
+        towercaseDesc.innerHTML = towerCase.alienware.modelOne.description;
+    }
+    else if(selection === "CoolerMaster"){
+        towercasePrice.innerHTML = `£${towerCase.coolermaster.modelOne.price}`;
+        towercaseDesc.innerHTML = towerCase.coolermaster.modelOne.description;
+    }
+    });
 
 
 
