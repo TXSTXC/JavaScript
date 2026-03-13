@@ -54,7 +54,6 @@ const motherboard = {
             price: 239.95,
             description: "xxxxx"
         }
-        
     },
     amd:{
         a520m:{
@@ -62,23 +61,36 @@ const motherboard = {
             price: 134.95,
             description: "xxxxx"
         }
-        
     }
 }
 
 let totalPrice = 0;
+let towercaseName = document.getElementById("towercase-name");
+let towercasePrice = document.getElementById("towercase-price");
+let towercaseDesc = document.getElementById("towercase-desc");
 
 //TOWER CASE
 const towerCaseOption = document.getElementById("towerCase");
 
 towerCaseOption.addEventListener("change", () => {
 
-    const selection = towerCaseOption.value;
+    const selection = towerCaseOption.value; //returns ("razer","msi","coolermaster")
+    if(!selection){
+        towercaseName.innerHTML = ``
+        towercasePrice.innerHTML = ``;
+        towercaseDesc.innerHTML = ``;
+    }
+    const selectionOutput = Object.values(towerCase[selection])[0];
+    addInfoForModel = (selection) => {
+        towercasePrice.innerHTML = `£${towerCase[selection].price}`;
+        towercaseDesc.innerHTML = towerCase[selection].description;
+    }
+    addInfoForModel(towerCase[selection]);
+    
+});
 
-    let towercaseName = document.getElementById("towercase-name");
-    let towercasePrice = document.getElementById("towercase-price");
-    let towercaseDesc = document.getElementById("towercase-desc");
 
+    /*
     towercaseName.innerHTML = selection;
 
     if (selection === "RAZER"){
@@ -99,8 +111,9 @@ towerCaseOption.addEventListener("change", () => {
         towercaseDesc.innerHTML = ``;
     }
     totalPrice = totalPrice + selectedPrice; //Need to sort the lgoic here so it adds the individual cost, per section, into the total.
-
-    });
+    */
+    
+  
 
 
 
