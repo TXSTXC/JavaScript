@@ -12,8 +12,16 @@
 
 
 
-//Product Info
+//COST CALCULATOR function
+let totalPrice = 0;
+let totalPriceElement = document.getElementById("total-cost");
 
+function costUpdate(){
+
+}
+
+
+//TOWER CASE FLOW
 const towerCase = {
     razer:{
             TomohawkATX:{
@@ -35,6 +43,27 @@ const towerCase = {
     }
 }
 
+let towercaseName = document.getElementById("towercase-name");
+let towercasePrice = document.getElementById("towercase-price");
+let towercaseDesc = document.getElementById("towercase-desc");
+let towerCaseOption = document.getElementById("towerCase");
+
+towerCaseOption.addEventListener("change", () => {
+    
+    let selection = towerCaseOption.value; //returns ("razer","msi","coolermaster")
+    if(!selection){
+        towercaseName.innerHTML = ``;
+        towercasePrice.innerHTML = ``;
+        towercaseDesc.innerHTML = ``;
+    }
+    else{
+        const towerModel = Object.values(towerCase[selection])[0];
+        towercasePrice.innerHTML = `£${towerModel.price}`;
+        towercaseDesc.innerHTML = towerModel.description;
+    }
+});
+
+//MOTHERBOARD FLOW
 const motherboard = {
     asus:{
         modelOne: {
@@ -42,11 +71,6 @@ const motherboard = {
             price: 129.99,
             description: "xxxxx"
         },
-        modelTwo: {
-            ramSlots: 2,
-            price: 89.99,
-            description: "xxxxx"
-        }
     },
     intel:{
         b760m:{
@@ -64,30 +88,78 @@ const motherboard = {
     }
 }
 
-let totalPrice = 0;
-let towercaseName = document.getElementById("towercase-name");
-let towercasePrice = document.getElementById("towercase-price");
-let towercaseDesc = document.getElementById("towercase-desc");
+let motherboardName = document.getElementById("motherboard-name");
+let motherboardPrice = document.getElementById("motherboard-price");
+let motherboardDesc = document.getElementById("motherboard-desc");
+let motherboardOption = document.getElementById("motherboard");
 
-//TOWER CASE
-const towerCaseOption = document.getElementById("towerCase");
+motherboardOption.addEventListener("change", () => {
+    let selection = motherboardOption.value; //returns ("motherboard1", "motherboard2", "motherboard3")
 
-towerCaseOption.addEventListener("change", () => {
-
-    const selection = towerCaseOption.value; //returns ("razer","msi","coolermaster")
     if(!selection){
-        towercaseName.innerHTML = ``
-        towercasePrice.innerHTML = ``;
-        towercaseDesc.innerHTML = ``;
+        motherboardName.innerHTML = ``;
+        motherboardPrice.innerHTML = ``;
+        motherboardDesc.innerHTML = ``;
     }
-    const selectionOutput = Object.values(towerCase[selection])[0];
-    addInfoForModel = (selection) => {
-        towercasePrice.innerHTML = `£${towerCase[selection].price}`;
-        towercaseDesc.innerHTML = towerCase[selection].description;
+    else{
+        const motherboardModel = Object.values(motherboard[selection])[0];
+        motherboardPrice.innerHTML = `£${motherboardModel.price}`;
+        motherboardDesc.innerHTML = motherboardModel.description;
     }
-    addInfoForModel(towerCase[selection]);
-    
 });
+
+
+//CPU FLOW
+const cpu = {
+    intel:{
+        i5:{
+            price: 199,
+            description: "xxxxx"
+        },
+        i7:{
+            price: 199,
+            description: "xxxxx"
+        },
+        i9:{
+            price: 199,
+            description: "xxxxx"
+        }
+    },
+    amd:{
+        ryzen5:{
+            price: 199,
+            description: "xxxxx"
+        },
+        ryzen7:{
+            price: 199,
+            description: "xxxxx"
+        },
+        ryzen9:{
+            price: 199,
+            description: "xxxxx"
+        }
+    }
+}
+
+let cpuName = document.getElementById("cpu-name")
+let cpuPrice = document.getElementById("cpu-price")
+let cpuDesc = document.getElementById("cpu-desc")
+let CpuOption = document.getElementById("cpu")
+
+CpuOption.addEventListener("change", () => {
+    let selection = CpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
+    const cpuModel = Object.values(cpu[selection])[0];
+    cpuPrice.InnerHTML = `£${cpuModel.price}`;
+    cpuDesc.InnerHTML = cpuModel.description;
+
+
+
+
+    if(!selection){
+        cpuName.innerHTML = ``;
+    }
+});
+
 
 
     /*
@@ -110,8 +182,9 @@ towerCaseOption.addEventListener("change", () => {
         towercasePrice.innerHTML = ``;
         towercaseDesc.innerHTML = ``;
     }
-    totalPrice = totalPrice + selectedPrice; //Need to sort the lgoic here so it adds the individual cost, per section, into the total.
-    */
+
+*/
+    
     
   
 
@@ -172,7 +245,7 @@ towerCaseOption.addEventListener("change", () => {
 
 
 
-
+/*
 //Objects can be created to hold values, and those vcalues can have values. Objects are declared individually and cannot be blueprinted like a Class.
 
 const carObject = {
@@ -252,3 +325,4 @@ const productList = [
 ];
 
 console.log(productList[0].name, productList[0].price, productList[0].description);
+*/

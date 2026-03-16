@@ -47,10 +47,10 @@
                     <img class="icon" src="./media/comp-config-media/tower-icon.png">
                     <label for="towerCase">Tower Case</label>
                     <select id="towerCase" class="" name="TowerCase">
-                    <option selected="selected">Select an option</option>
-                    <option id="tc-option1">RAZER</option>
-                    <option id="tc-option2">MSI</option>
-                    <option id="tc-option3">CoolerMaster</option>
+                    <option value="">Select an option</option>
+                    <option value="razer">RAZER</option>
+                    <option value="msi">MSI</option>
+                    <option value="coolermaster">CoolerMaster</option>
                     </select>  
                 </div>
 
@@ -70,19 +70,22 @@
             <div class="container-row">
                 <div class="selection-row-left">
                     <img class="icon" src="./media/comp-config-media/tower-icon.png">
-                    <label for="componentX">MOTHERBOARD</label>
-                    <select id="componentX" class="" name="componentX">
-                    <option disabled selected="selected">Select an option</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
+                    <label for="motherboard">MOTHERBOARD</label>
+                    <select id="motherboard" class="" name="motherboard">
+                    <option value="">Select an option</option>
+                    <option value="asus">Option 1</option>
+                    <option value="intel">Option 2</option>
+                    <option value="amd">Option 3</option>
                     </select>  
                 </div>
 
                 <div class="selection-row-right">
-                    <img class="product-icon" src="./media/comp-config-media/lukepc-logo.png">
-                    <p class="product-price">Price: £900</p>
-                </div>
+                    <img id="motherboard-image" class="product-icon" src="./media/comp-config-media/lukepc-logo.png">
+                    <div class="">
+                        <p id="motherboard-name" class="product-name"></p>
+                       <p id="motherboard-price" class="product-price"></p>
+                       <p id="motherboard-desc" class="product-desc"></p>
+                    </div>
             </div>
         </div>
 
@@ -90,19 +93,25 @@
             <div class="container-row">
                 <div class="selection-row-left">
                     <img class="icon" src="./media/comp-config-media/tower-icon.png">
-                    <label for="componentX">CPU</label>
-                    <select id="componentX" class="" name="componentX">
-                    <option disabled selected="selected">Select an option</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
+                    <label for="cpu">CPU</label>
+                    <select id="cpu" class="" name="cpu">
+                    <option value="">Select an option</option>
+                    <option value="i5">Option 1</option>
+                    <option value="i7">Option 2</option>
+                    <option value="i9">Option 3</option>
+                    <option value="ryzen5">Option 3</option>
+                    <option value="ryzen7">Option 3</option>
+                    <option value="ryzen9">Option 3</option>
                     </select>  
                 </div>
 
                 <div class="selection-row-right">
-                    <img class="product-icon" src="./media/comp-config-media/lukepc-logo.png">
-                    <p class="product-price">Price: £900</p>
-                </div>
+                    <img id="cpu-image" class="product-icon" src="./media/comp-config-media/lukepc-logo.png">
+                    <div class="">
+                        <p id="cpu-name" class="product-name"></p>
+                       <p id="cpu-price" class="product-price"></p>
+                       <p id="cpu-desc" class="product-desc"></p>
+                    </div>
             </div>
         </div>
 
