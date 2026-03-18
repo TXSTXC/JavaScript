@@ -60,28 +60,23 @@ towerCaseOption.addEventListener("change", () => {
 
 //MOTHERBOARD FLOW
 const motherboard = {
-    asus:{
-        modelOne: {
+        StrixB550F: {
             ramSlots: 4,
-            price: 129.99,
-            description: "xxxxx"
+            price: 149.00,
+            description: "AMD B550 Ryzen AM4 Gaming ATX motherboard with PCIe® 4.0, 12+2 teamed power stages, Intel® 2.5 Gb Ethernet, WiFi 6E, Two-Way AI Noise Cancelation, dual M.2 slots with heatsinks, SATA 6 Gbps, USB 3.2 Gen 2 and Aura Sync RGB lighting"
         },
-    },
-    intel:{
         b760m:{
             ramSlots: 4,
-            price: 239.95,
-            description: "xxxxx"
-        }
-    },
-    amd:{
+            price: 119.49,
+            description: "The B760M GAMING PLUS WIFI is designed with tons of connectivity, flexible tools, a convenient Wi-Fi solution and DDR5 memory support for gamers who want it all."
+        },
         a520m:{
             ramSlots: 4,
-            price: 134.95,
-            description: "xxxxx"
+            price: 71.97,
+            description: "The AMD A520M is a budget-friendly Micro-ATX motherboard chipset designed for Socket AM4, primarily supporting 3rd Gen Ryzen and Ryzen 4000/5000 series processors."
         }
-    }
-}
+    
+};
 
 let motherboardName = document.getElementById("motherboard-name");
 let motherboardPrice = document.getElementById("motherboard-price");
@@ -97,7 +92,8 @@ motherboardOption.addEventListener("change", () => {
         motherboardDesc.innerHTML = ``;
     }
     else{
-        const motherboardModel = Object.values(motherboard[selection])[0];
+        const motherboardModel = (motherboard[selection]);
+        motherboardName.innerHTML = selection;
         motherboardPrice.innerHTML = `£${motherboardModel.price}`;
         motherboardDesc.innerHTML = motherboardModel.description;
     }
@@ -107,28 +103,28 @@ motherboardOption.addEventListener("change", () => {
 //CPU FLOW
 const cpu = {
         i5:{
-            price: 199,
-            description: "xxxxx"
+            price: 149.99,
+            description: "The 12th Generation of Intel® Core™ Processors are here! The i5-12400F allows you to compete with confidence or get immersed in new worlds with a revolutionary processor architecture that focuses on what matters more - Gaming!"
         },
         i7:{
-            price: 199,
-            description: "xxxxx"
+            price: 239.99,
+            description: "The 12th Generation of Intel® Core™ Processors are here! The i7-12700F gives you the highest clock speeds and a groundbreaking new architecture, you will be able to push your gameplay to new heights while secondary apps run seamlessly in the background."
         },
         i9:{
-            price: 199,
-            description: "xxxxx"
+            price: 322.99,
+            description: "Intel Core i9 processors are high-performance flagship CPUs designed for demanding tasks like 4K video editing, 3D rendering, and high-end gaming."
         },        
         ryzen5:{
-            price: 199,
-            description: "xxxxx"
+            price: 79.99,
+            description: "AMD Ryzen 5 processors are 6-core/12-thread CPUs designed for mid-range, budget-friendly gaming and productivity, offering excellent value with strong multi-core performance."
         },
         ryzen7:{
-            price: 199,
-            description: "xxxxx"
+            price: 172.99,
+            description: "The AMD Ryzen 7 is a high-performance CPU series designed for gaming, content creation, and multitasking, typically featuring 8 cores and 16 threads."
         },
         ryzen9:{
-            price: 199,
-            description: "xxxxx"
+            price: 289.99,
+            description: "The AMD Ryzen 9 is a high-end desktop and laptop processor series designed for enthusiasts, creators, and high-performance gaming, featuring up to 16 cores and 32 threads."
         }        
 }
 
@@ -147,6 +143,7 @@ CpuOption.addEventListener("change", () => {
     }
         else{
         const cpuModel = cpu[selection];
+        cpuName.innerHTML = selection;
         cpuPrice.innerHTML = `£${cpuModel.price}`;
         cpuDesc.innerHTML = cpuModel.description;
     }
