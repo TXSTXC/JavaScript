@@ -11,16 +11,6 @@
 //Data stored in arrays to then be selected and create a PC (object) at the end of the process.
 
 
-
-//COST CALCULATOR function
-let totalPrice = 0;
-let totalPriceElement = document.getElementById("total-cost");
-
-function costUpdate(){
-
-}
-
-
 //TOWER CASE FLOW
 const towerCase = {
             TomohawkATX:{
@@ -41,6 +31,7 @@ let towercaseName = document.getElementById("towercase-name");
 let towercasePrice = document.getElementById("towercase-price");
 let towercaseDesc = document.getElementById("towercase-desc");
 let towerCaseOption = document.getElementById("towerCase");
+let selectedTowercasePrice = 0;
 
 towerCaseOption.addEventListener("change", () => {
     
@@ -52,6 +43,7 @@ towerCaseOption.addEventListener("change", () => {
     }
     else{
         const towerModel = towerCase[selection];
+        selectedTowercasePrice = towerModel.price;
         towercaseName.innerHTML = selection;
         towercasePrice.innerHTML = `£${towerModel.price}`;
         towercaseDesc.innerHTML = towerModel.description;
@@ -82,6 +74,7 @@ let motherboardName = document.getElementById("motherboard-name");
 let motherboardPrice = document.getElementById("motherboard-price");
 let motherboardDesc = document.getElementById("motherboard-desc");
 let motherboardOption = document.getElementById("motherboard");
+let selectedMotherboardPrice = 0;
 
 motherboardOption.addEventListener("change", () => {
     let selection = motherboardOption.value; //returns ("motherboard1", "motherboard2", "motherboard3")
@@ -93,6 +86,7 @@ motherboardOption.addEventListener("change", () => {
     }
     else{
         const motherboardModel = (motherboard[selection]);
+        selectedMotherboardPrice = motherboardModel.price;
         motherboardName.innerHTML = selection;
         motherboardPrice.innerHTML = `£${motherboardModel.price}`;
         motherboardDesc.innerHTML = motherboardModel.description;
@@ -132,6 +126,7 @@ let cpuName = document.getElementById("cpu-name");
 let cpuPrice = document.getElementById("cpu-price");
 let cpuDesc = document.getElementById("cpu-desc");
 let cpuOption = document.getElementById("cpu");
+let selectedCpuPrice = 0;
 
 cpuOption.addEventListener("change", () => {
     let selection = cpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
@@ -143,6 +138,7 @@ cpuOption.addEventListener("change", () => {
     }
         else{
         const cpuModel = cpu[selection];
+        selectedCpuPrice = cpuModel.price;
         cpuName.innerHTML = selection;
         cpuPrice.innerHTML = `£${cpuModel.price}`;
         cpuDesc.innerHTML = cpuModel.description;
@@ -171,6 +167,7 @@ let ramName = document.getElementById("ram-name");
 let ramPrice = document.getElementById("ram-price");
 let ramDesc = document.getElementById("ram-desc");
 let ramOption = document.getElementById("ram");
+let selectedRamPrice = 0;
 
 ramOption.addEventListener("change", () => {
     let selection = ramOption.value; //
@@ -182,6 +179,7 @@ ramOption.addEventListener("change", () => {
     }
         else{
         const ramModel = ram[selection];
+        selectedRamPrice = ramModel.price;
         ramName.innerHTML = selection;
         ramPrice.innerHTML = `£${ramModel.price}`;
         ramDesc.innerHTML = ramModel.description;
@@ -227,11 +225,31 @@ let selection = gpuOption.value; //Gives the string value of the selected option
 });
 
 const computerBuild = {
-    motherboardPrice: motherboardPrice,
-
+    towercasePrice: selectedTowercasePrice,
+    motherboardPrice: selectedMotherboardPrice,
+    cpuPrice: selectedCpuPrice,
+    ramPrice: selectedRamPrice,
+    gpuPrice: selectedGpuPrice
 }
 
-console.log(selectedGpuPrice);
+function logPrices(){
+    console.log(selectedTowercasePrice);
+    console.log(selectedMotherboardPrice);
+    console.log(selectedCpuPrice);
+    console.log(selectedRamPrice);
+    console.log(selectedCpuPrice);
+}
+
+//COST CALCULATOR FUNCTION
+function priceUpdate (){
+    let totalPrice = selectedTowercasePrice + selectedMotherboardPrice + selectedCpuPrice + selectedRamPrice + selectedGpuPrice;
+    let totalPriceElement = document.getElementById("total-cost");
+    totalPriceElement.innerHTML = `£${totalPrice}`;
+}
+
+
+
+
 
 
 
