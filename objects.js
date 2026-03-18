@@ -23,25 +23,19 @@ function costUpdate(){
 
 //TOWER CASE FLOW
 const towerCase = {
-    razer:{
             TomohawkATX:{
                 price:99.99,
                 description: "To build the ultimate gaming desktop, it begins with a frame that can support the performance within. Meet the Razer Tomahawk ATX."
             },
-    },
-    msi:{
             magForge100R: {
                 price: 44.97,
                 description: " It's ready to cool off your mid-range build right out of the box!"
+            },
+            masterBoxTd500: {
+                price: 64.99,
+                description: "This MasterBox TD500 by Cooler Master in white has a classic defined look with a polygonal design."
             }
-    },
-    coolermaster: {
-        masterBoxTd500: {
-            price: 64.99,
-            description: "This MasterBox TD500 by Cooler Master in white has a classic defined look with a polygonal design."
-        }
-    }
-}
+    };
 
 let towercaseName = document.getElementById("towercase-name");
 let towercasePrice = document.getElementById("towercase-price");
@@ -50,14 +44,15 @@ let towerCaseOption = document.getElementById("towerCase");
 
 towerCaseOption.addEventListener("change", () => {
     
-    let selection = towerCaseOption.value; //returns ("razer","msi","coolermaster")
+    let selection = towerCaseOption.value; //returns (TomohawkATX, magForge100R, masterBoxTd500)
     if(!selection){
         towercaseName.innerHTML = ``;
         towercasePrice.innerHTML = ``;
         towercaseDesc.innerHTML = ``;
     }
     else{
-        const towerModel = Object.values(towerCase[selection])[0];
+        const towerModel = towerCase[selection];
+        towercaseName.innerHTML = selection;
         towercasePrice.innerHTML = `£${towerModel.price}`;
         towercaseDesc.innerHTML = towerModel.description;
     }
@@ -111,7 +106,6 @@ motherboardOption.addEventListener("change", () => {
 
 //CPU FLOW
 const cpu = {
-    intel:{
         i5:{
             price: 199,
             description: "xxxxx"
@@ -123,9 +117,7 @@ const cpu = {
         i9:{
             price: 199,
             description: "xxxxx"
-        }
-    },
-    amd:{
+        },        
         ryzen5:{
             price: 199,
             description: "xxxxx"
@@ -137,8 +129,7 @@ const cpu = {
         ryzen9:{
             price: 199,
             description: "xxxxx"
-        }
-    }
+        }        
 }
 
 let cpuName = document.getElementById("cpu-name")
@@ -148,15 +139,16 @@ let CpuOption = document.getElementById("cpu")
 
 CpuOption.addEventListener("change", () => {
     let selection = CpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
-    const cpuModel = Object.values(cpu[selection])[0];
-    cpuPrice.InnerHTML = `£${cpuModel.price}`;
-    cpuDesc.InnerHTML = cpuModel.description;
-
-
-
 
     if(!selection){
         cpuName.innerHTML = ``;
+        cpuPrice.innerHTML = ``;
+        cpuDesc.innerHTML = ``;
+    }
+        else{
+        const cpuModel = cpu[selection];
+        cpuPrice.innerHTML = `£${cpuModel.price}`;
+        cpuDesc.innerHTML = cpuModel.description;
     }
 });
 
