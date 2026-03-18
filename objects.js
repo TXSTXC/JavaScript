@@ -237,14 +237,6 @@ const computerBuild = {
     gpuPrice: selectedGpuPrice
 }
 
-function logPrices(){
-    console.log(selectedTowercasePrice);
-    console.log(selectedMotherboardPrice);
-    console.log(selectedCpuPrice);
-    console.log(selectedRamPrice);
-    console.log(selectedCpuPrice);
-}
-
 //COST CALCULATOR FUNCTION
 function priceUpdate (){
     let totalPrice = selectedTowercasePrice + selectedMotherboardPrice + selectedCpuPrice + selectedRamPrice + selectedGpuPrice;
