@@ -114,15 +114,15 @@ const cpu = {
             price: 322.99,
             description: "Intel Core i9 processors are high-performance flagship CPUs designed for demanding tasks like 4K video editing, 3D rendering, and high-end gaming."
         },        
-        ryzen5:{
+        Ryzen5:{
             price: 79.99,
             description: "AMD Ryzen 5 processors are 6-core/12-thread CPUs designed for mid-range, budget-friendly gaming and productivity, offering excellent value with strong multi-core performance."
         },
-        ryzen7:{
+        Ryzen7:{
             price: 172.99,
             description: "The AMD Ryzen 7 is a high-performance CPU series designed for gaming, content creation, and multitasking, typically featuring 8 cores and 16 threads."
         },
-        ryzen9:{
+        Ryzen9:{
             price: 289.99,
             description: "The AMD Ryzen 9 is a high-end desktop and laptop processor series designed for enthusiasts, creators, and high-performance gaming, featuring up to 16 cores and 32 threads."
         }        
@@ -193,14 +193,39 @@ ramOption.addEventListener("change", () => {
 
 const gpu = {
     RTX5090:{
-        price:500,
-        description:"XXXXX"
+        price:3189.99,
+        description:"ASUS NVIDIA GeForce RTX 5090 32GB TUF GAMING OC Blackwell Graphics Card"
     },
     RTX5070:{
-        price: 700,
-        description: "XXXXX"
+        price: 548.99,
+        description: "MSI NVIDIA GeForce RTX 5070 12GB VENTUS 2X OC Blackwell Graphics Card"
     },
 }
+
+let gpuName = document.getElementById("gpu-name");
+let gpuPrice = document.getElementById("gpu-price");
+let gpuDesc = document.getElementById("gpu-desc");
+let gpuOption = document.getElementById("gpu");
+
+gpuOption.addEventListener("change", () =>{
+let selection = gpuOption.value; //Gives the string value of the selected option
+
+    if(!selection){
+        gpuName.innerHTML = ``;
+        gpuPrice.innerHTML = ``;
+        gpuDesc.innerHTML = ``;
+    }
+        else{
+        const gpuModel = gpu[selection];
+        gpuName.innerHTML = selection;
+        gpuPrice.innerHTML = `£${gpuModel.price}`;
+        gpuDesc.innerHTML = gpuModel.description;
+    }
+
+});
+
+
+
 
 
 

@@ -99,9 +99,9 @@
                     <option value="i5">Intel i5</option>
                     <option value="i7">Intel i7</option>
                     <option value="i9">Intel i9</option>
-                    <option value="ryzen5">AMD Ryzen 5</option>
-                    <option value="ryzen7">AMD Ryzen 7</option>
-                    <option value="ryzen9">AMD Ryzen 9</option>
+                    <option value="Ryzen5">AMD Ryzen 5</option>
+                    <option value="Ryzen7">AMD Ryzen 7</option>
+                    <option value="Ryzen9">AMD Ryzen 9</option>
                     </select>  
                 </div>
 
@@ -145,23 +145,29 @@
             <div class="container-row">
                 <div class="selection-row-left">
                     <img class="icon" src="./media/comp-config-media/tower-icon.png">
-                    <label for="componentX">Graphics Card</label>
-                    <select id="componentX" class="" name="componentX">
-                    <option disabled selected="selected">Select an option</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
+                    <label for="gpu">Graphics Card</label>
+                    <select id="gpu" class="" name="gpu">
+                    <option value="">Select an option</option>
+                    <option value="RTX5090">RTX 5090</option>
+                    <option value="RTX5070">RTX 5070</option>
                     </select>  
                 </div>
 
                 <div class="selection-row-right">
                     <img class="product-icon" src="./media/comp-config-media/lukepc-logo.png">
+                    <div class="selection-row-right-sub">
                         <p id="gpu-name" class="product-name smt smb"></p>
                         <p id="gpu-price" class="product-price smt smb"></p>
                         <p id="gpu-desc" class="product-desc smt smb"></p>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
 
         <!-- TOTAL COST -->
          <div class="container-row">
