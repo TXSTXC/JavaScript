@@ -206,6 +206,7 @@ let gpuName = document.getElementById("gpu-name");
 let gpuPrice = document.getElementById("gpu-price");
 let gpuDesc = document.getElementById("gpu-desc");
 let gpuOption = document.getElementById("gpu");
+let selectedGpuPrice = 0;
 
 gpuOption.addEventListener("change", () =>{
 let selection = gpuOption.value; //Gives the string value of the selected option
@@ -217,6 +218,7 @@ let selection = gpuOption.value; //Gives the string value of the selected option
     }
         else{
         const gpuModel = gpu[selection];
+        selectedGpuPrice = gpuModel.price;
         gpuName.innerHTML = selection;
         gpuPrice.innerHTML = `£${gpuModel.price}`;
         gpuDesc.innerHTML = gpuModel.description;
@@ -224,7 +226,12 @@ let selection = gpuOption.value; //Gives the string value of the selected option
 
 });
 
+const computerBuild = {
+    motherboardPrice: motherboardPrice,
 
+}
+
+console.log(selectedGpuPrice);
 
 
 
