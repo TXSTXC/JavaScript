@@ -48,6 +48,7 @@ towerCaseOption.addEventListener("change", () => {
         towercasePrice.innerHTML = `£${towerModel.price}`;
         towercaseDesc.innerHTML = towerModel.description;
     }
+    priceUpdate();
 });
 
 //MOTHERBOARD FLOW
@@ -91,6 +92,7 @@ motherboardOption.addEventListener("change", () => {
         motherboardPrice.innerHTML = `£${motherboardModel.price}`;
         motherboardDesc.innerHTML = motherboardModel.description;
     }
+    priceUpdate();
 });
 
 
@@ -143,6 +145,7 @@ cpuOption.addEventListener("change", () => {
         cpuPrice.innerHTML = `£${cpuModel.price}`;
         cpuDesc.innerHTML = cpuModel.description;
     }
+    priceUpdate();
 });
 
 
@@ -184,6 +187,7 @@ ramOption.addEventListener("change", () => {
         ramPrice.innerHTML = `£${ramModel.price}`;
         ramDesc.innerHTML = ramModel.description;
     }
+    priceUpdate();
 });
 
 
@@ -221,6 +225,7 @@ let selection = gpuOption.value; //Gives the string value of the selected option
         gpuPrice.innerHTML = `£${gpuModel.price}`;
         gpuDesc.innerHTML = gpuModel.description;
     }
+    priceUpdate();
 
 });
 
