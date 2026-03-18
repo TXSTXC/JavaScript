@@ -94,7 +94,8 @@ select{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    margin-left: 5px;
 }
 /* Links container centered horizontally */
 .header-links {
@@ -143,6 +144,12 @@ select{
 }
 .underline{
     border-bottom: 1px solid aliceblue;
+}
+.smt{
+    margin-top: 5px;
+}
+.smb{
+    margin-bottom: 5px;
 }
 
 

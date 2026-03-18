@@ -128,13 +128,13 @@ const cpu = {
         }        
 }
 
-let cpuName = document.getElementById("cpu-name")
-let cpuPrice = document.getElementById("cpu-price")
-let cpuDesc = document.getElementById("cpu-desc")
-let CpuOption = document.getElementById("cpu")
+let cpuName = document.getElementById("cpu-name");
+let cpuPrice = document.getElementById("cpu-price");
+let cpuDesc = document.getElementById("cpu-desc");
+let cpuOption = document.getElementById("cpu");
 
-CpuOption.addEventListener("change", () => {
-    let selection = CpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
+cpuOption.addEventListener("change", () => {
+    let selection = cpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
 
     if(!selection){
         cpuName.innerHTML = ``;
@@ -157,7 +157,49 @@ const ram = {
         price:521.99,
         description:  "CORSAIR VENGEANCE RGB PRO SL DDR4 memory lights up your PC with dynamic, individually addressable RGB lighting, while delivering peak performance in 44mm-tall compact memory modules."
     },
-    
+    Option2:{
+        price:521.99,
+        description:  "CORSAIR VENGEANCE RGB PRO SL DDR4 memory lights up your PC with dynamic, individually addressable RGB lighting, while delivering peak performance in 44mm-tall compact memory modules."
+    },
+    Option3:{
+        price:521.99,
+        description:  "CORSAIR VENGEANCE RGB PRO SL DDR4 memory lights up your PC with dynamic, individually addressable RGB lighting, while delivering peak performance in 44mm-tall compact memory modules."
+    },
+}
+
+let ramName = document.getElementById("ram-name");
+let ramPrice = document.getElementById("ram-price");
+let ramDesc = document.getElementById("ram-desc");
+let ramOption = document.getElementById("ram");
+
+ramOption.addEventListener("change", () => {
+    let selection = ramOption.value; //
+
+    if(!selection){
+        ramName.innerHTML = ``;
+        ramPrice.innerHTML = ``;
+        ramDesc.innerHTML = ``;
+    }
+        else{
+        const ramModel = ram[selection];
+        ramName.innerHTML = selection;
+        ramPrice.innerHTML = `£${ramModel.price}`;
+        ramDesc.innerHTML = ramModel.description;
+    }
+});
+
+
+//GPU FLOW
+
+const gpu = {
+    RTX5090:{
+        price:500,
+        description:"XXXXX"
+    },
+    RTX5070:{
+        price: 700,
+        description: "XXXXX"
+    },
 }
 
 
