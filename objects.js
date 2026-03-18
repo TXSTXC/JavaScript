@@ -150,8 +150,46 @@ CpuOption.addEventListener("change", () => {
 });
 
 
+//RAM FLOW
 
-    /*
+const ram = {
+    corsair64GB:{
+        price:521.99,
+        description:  "CORSAIR VENGEANCE RGB PRO SL DDR4 memory lights up your PC with dynamic, individually addressable RGB lighting, while delivering peak performance in 44mm-tall compact memory modules."
+    },
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Original code to select and assign the correct data to the innerHTML elements.
     towercaseName.innerHTML = selection;
 
     if (selection === "RAZER"){
