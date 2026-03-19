@@ -37,6 +37,9 @@ class Staff{
 }
 
 let MyShop = new Shop ("MyShop",[],[],2);
-
+let Alice = new Staff ("Alice");
 let kettle = new Product ("kettle",14.99,5);
 let cup = new Product ("cup",3.99,15);
+
+MyShop.addProducts(kettle);
+MyShop.addStaff(Alice);
