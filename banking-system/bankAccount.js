@@ -1,8 +1,9 @@
 
 class BankAccount{
-    constructor(accountNumber,sortCode,accountForename,currentBalance){
+    constructor(accountNumber,sortCode,passcode,accountForename,currentBalance){
      this.accountNumber = accountNumber; // ACC no.
      this.sortCode = sortCode;
+     this.passcode = passcode;
      this.accountForename = accountForename; // Name
      this.currentBalance = currentBalance; //This has given the account a starting balance.
      }
@@ -23,7 +24,7 @@ class BankAccount{
         }
 };
 
-let lukeAccount = new BankAccount(111111, "12-34-56", "Luke", 1000);
+let lukeAccount = new BankAccount("111111", "12-34-56", "0101", "Luke", 1000);
 
 
 
