@@ -204,7 +204,7 @@ const gpu = {
     },
 }
 
-let gpuName = document.getElementById("gpu-name");
+let gpuName = document.getElementById([data-point-"ram-name"]);
 let gpuPrice = document.getElementById("gpu-price");
 let gpuDesc = document.getElementById("gpu-desc");
 let gpuOption = document.getElementById("gpu");
@@ -218,7 +218,7 @@ let selection = gpuOption.value; //Gives the string value of the selected option
         gpuPrice.innerHTML = ``;
         gpuDesc.innerHTML = ``;
     }
-        else{
+    else{
         const gpuModel = gpu[selection];
         selectedGpuPrice = gpuModel.price;
         gpuName.innerHTML = selection;
@@ -243,6 +243,19 @@ function priceUpdate (){
     let totalPriceElement = document.getElementById("total-cost");
     totalPriceElement.innerHTML = `£${totalPrice}`;
 }
+
+//Places that could be optimised, but unsure how to do so...
+
+//else statements...
+//These all do the same thing, with only the gpu/cpu/ram/etc... changing within the code. Could I make a way for a 
+// function to assign this part of the code to a variable, maybe?
+
+//The same applies for the if section... THis is exactly the same, just with the prefixed 
+// part name being different each time.
+
+//Price Function
+//Could the 'letTotalPrice' be optimised so it is based off a variable, not a concat of variables?
+//Maybe from an array, which stores all + new component names?
 
 
 
