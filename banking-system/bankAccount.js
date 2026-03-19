@@ -1,5 +1,6 @@
 
-class BankAccount{
+
+export class BankAccount{
     constructor(accountNumber,sortCode,passcode,accountForename,currentBalance){
      this.accountNumber = accountNumber; // ACC no.
      this.sortCode = sortCode;
@@ -25,6 +26,7 @@ class BankAccount{
 };
 
 let lukeAccount = new BankAccount("111111", "12-34-56", "0101", "Luke", 1000);
+
 
 
 
