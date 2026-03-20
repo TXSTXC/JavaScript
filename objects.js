@@ -226,7 +226,6 @@ let selection = gpuOption.value; //Gives the string value of the selected option
         gpuDesc.innerHTML = gpuModel.description;
     }
     priceUpdate();
-
 });
 
 const computerBuild = {

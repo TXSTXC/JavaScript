@@ -21,6 +21,9 @@ class Shop{
     addProducts(product){
         this.products.push(product);
     }
+    renameShop(newShopName){
+        this.shopName = newShopName;
+    }
 }
 
 class Product{
@@ -35,11 +38,19 @@ class Staff{
         this.name = name;
     }
 }
+class ShopName{
+    constructor(newShopName){
+        this.shopName = newShopName;
+    }
+}
 
 let MyShop = new Shop ("MyShop",[],[],2);
 let Alice = new Staff ("Alice");
 let kettle = new Product ("kettle",14.99,5);
 let cup = new Product ("cup",3.99,15);
+
+let JordanShop = new Shop ("Jordans Shop",[],["James"],4);
+console.log(JordanShop);
 
 MyShop.addProducts(kettle);
 MyShop.addStaff(Alice);

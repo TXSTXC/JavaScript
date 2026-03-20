@@ -26,7 +26,7 @@ export class BankAccount{
 };
 
 let lukeAccount = new BankAccount("111111", "12-34-56", "0101", "Luke", 1000);
-
+const myValue = lukeAccount.getBalance();
 
 
 
