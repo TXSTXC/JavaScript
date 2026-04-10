@@ -1,0 +1,32 @@
+
+.main-container{
+    display:flex;
+    width:100%;
+    padding-top: 10px;
+}
+.left-col-container{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+}
+.right-col-container{
+    display:flex;
+    flex-direction: column;
+    width:70%
+}
+.rc-top-container{
+    display:flex;
+    width: 100%;
+}
+.rc-bottom-container{
+    display:flex;
+    width: 100%;
+}
+
+
+
+/* IMAGERY */
+#halo-logo{
+    width: 30%;
+    height: auto;
+}
