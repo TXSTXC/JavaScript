@@ -11,7 +11,22 @@
 //Data stored in arrays to then be selected and create a PC (object) at the end of the process.
 
 
-//TOWER CASE FLOW
+
+
+//Selection Functions to pre-fix the selection before the data.
+const notUserSelection = (modelName, modelPrice, modelDesc) =>{
+        modelName.innerHTML = ``;
+        modelPrice.innerHTML = ``;
+        modelDesc.innerHTML = ``;
+}
+const userSelection = (modelOption, selection, modelName, modelPrice, modelDesc) =>{
+        selectedPrice = modelOption.price;
+        modelName.innerHTML = selection;
+        modelPrice.innerHTML = `£${modelOption.price}`;
+        modelDesc.innerHTML = modelOption.description;
+}
+
+    //TOWER CASE FLOW
 const towerCase = {
             TomohawkATX:{
                 price:99.99,
@@ -27,28 +42,25 @@ const towerCase = {
             }
     };
 
-let towercaseName = document.getElementById("towercase-name");
-let towercasePrice = document.getElementById("towercase-price");
-let towercaseDesc = document.getElementById("towercase-desc");
-let towerCaseOption = document.getElementById("towerCase");
-let selectedTowercasePrice = 0;
+
+
+const towercaseName = document.getElementById([towerCase-"name"]);
+const towercasePrice = document.getElementById([towerCase-"price"]);
+const towercaseDesc = document.getElementById([towerCase-"desc"]);
+const towerCaseOption = document.getElementById("towerCase");
+const selectedTowercasePrice = 0;
 
 towerCaseOption.addEventListener("change", () => {
     
-    let selection = towerCaseOption.value; //returns (TomohawkATX, magForge100R, masterBoxTd500)
+    const selection = towerCaseOption.value; //returns (TomohawkATX, magForge100R, masterBoxTd500)
     if(!selection){
-        towercaseName.innerHTML = ``;
-        towercasePrice.innerHTML = ``;
-        towercaseDesc.innerHTML = ``;
+        notUserSelection(towercaseName, towercasePrice, towercaseDesc);
     }
     else{
         const towerModel = towerCase[selection];
-        selectedTowercasePrice = towerModel.price;
-        towercaseName.innerHTML = selection;
-        towercasePrice.innerHTML = `£${towerModel.price}`;
-        towercaseDesc.innerHTML = towerModel.description;
+        userSelection(towerCase, selection, towercaseName, towercasePrice, towercaseDesc);
+        priceUpdate();
     }
-    priceUpdate();
 });
 
 //MOTHERBOARD FLOW
@@ -124,11 +136,16 @@ const cpu = {
         }        
 }
 
-let cpuName = document.getElementById("cpu-name");
-let cpuPrice = document.getElementById("cpu-price");
-let cpuDesc = document.getElementById("cpu-desc");
+// let cpuName = document.getElementById("cpu-name");
+// let cpuPrice = document.getElementById("cpu-price");
+// let cpuDesc = document.getElementById("cpu-desc");
 let cpuOption = document.getElementById("cpu");
 let selectedCpuPrice = 0;
+const cpuChoice = {
+    name:document.getElementById("cpu-name"),
+    price:document.getElementById("cpu-price"),
+    desc:document.getElementById("cpu-desc"),
+}
 
 cpuOption.addEventListener("change", () => {
     let selection = cpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
