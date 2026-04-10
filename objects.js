@@ -52,16 +52,16 @@ const towercaseName = document.getElementById("towercase-name");
 const towercasePrice = document.getElementById("towercase-price");
 const towercaseDesc = document.getElementById("towercase-desc");
 const towerCaseOption = document.getElementById("towerCase");
-const selectedTowercasePrice = 0;
+let selectedTowercasePrice = 0;
 
 towerCaseOption.addEventListener("change", () => {
-    
     const selection = towerCaseOption.value; //returns (TomohawkATX, magForge100R, masterBoxTd500)
     if(!selection){
         notUserSelection(towercaseName, towercasePrice, towercaseDesc);
     }
     else{
         const towerModel = towerCase[selection];
+        selectedTowercasePrice = towerCase[selection].price;
         userSelection(towerModel, selection, towercaseName, towercasePrice, towercaseDesc);
         priceUpdate();
     }
@@ -87,28 +87,23 @@ const motherboard = {
     
 };
 
-let motherboardName = document.getElementById("motherboard-name");
-let motherboardPrice = document.getElementById("motherboard-price");
-let motherboardDesc = document.getElementById("motherboard-desc");
-let motherboardOption = document.getElementById("motherboard");
+const motherboardName = document.getElementById("motherboard-name");
+const motherboardPrice = document.getElementById("motherboard-price");
+const motherboardDesc = document.getElementById("motherboard-desc");
+const motherboardOption = document.getElementById("motherboard");
 let selectedMotherboardPrice = 0;
 
 motherboardOption.addEventListener("change", () => {
-    let selection = motherboardOption.value; //returns ("motherboard1", "motherboard2", "motherboard3")
-
+    
+    const selection = motherboardOption.value; //returns ("motherboard1", "motherboard2", "motherboard3")
     if(!selection){
-        motherboardName.innerHTML = ``;
-        motherboardPrice.innerHTML = ``;
-        motherboardDesc.innerHTML = ``;
+        notUserSelection(motherboardName, motherboardPrice, motherboardDesc);
     }
     else{
-        const motherboardModel = (motherboard[selection]);
-        selectedMotherboardPrice = motherboardModel.price;
-        motherboardName.innerHTML = selection;
-        motherboardPrice.innerHTML = `£${motherboardModel.price}`;
-        motherboardDesc.innerHTML = motherboardModel.description;
+        const motherboardModel = motherboard[selection];
+        userSelection(motherboardModel, selection, motherboardName, motherboardPrice, motherboardDesc);
+        priceUpdate();
     }
-    priceUpdate();
 });
 
 
@@ -152,19 +147,15 @@ const cpuChoice = {
 }
 
 cpuOption.addEventListener("change", () => {
-    let selection = cpuOption.value; //returns i5, i7, i9, ryzen5, ryzen7, ryzen9
-
+    
+    const selection = cpuOption.value; //returns ("motherboard1", "motherboard2", "motherboard3")
     if(!selection){
-        cpuName.innerHTML = ``;
-        cpuPrice.innerHTML = ``;
-        cpuDesc.innerHTML = ``;
+        notUserSelection(cpuName, cpuPrice, cpuDesc);
     }
-        else{
+    else{
         const cpuModel = cpu[selection];
-        selectedCpuPrice = cpuModel.price;
-        cpuName.innerHTML = selection;
-        cpuPrice.innerHTML = `£${cpuModel.price}`;
-        cpuDesc.innerHTML = cpuModel.description;
+        userSelection(cpuModel, selection, cpuName, cpuPrice, cpuDesc);
+        priceUpdate();
     }
     priceUpdate();
 });
@@ -193,22 +184,18 @@ let ramDesc = document.getElementById("ram-desc");
 let ramOption = document.getElementById("ram");
 let selectedRamPrice = 0;
 
-ramOption.addEventListener("change", () => {
-    let selection = ramOption.value; //
+//ramOption.src="images/ram.jpg";
 
+ramOption.addEventListener("change", () => {
+    const selection = ramOption.value; //returns ("ram1", "ram2", "ram3")
     if(!selection){
-        ramName.innerHTML = ``;
-        ramPrice.innerHTML = ``;
-        ramDesc.innerHTML = ``;
+        notUserSelection(ramName, ramPrice, ramDesc);
     }
-        else{
+    else{
         const ramModel = ram[selection];
-        selectedRamPrice = ramModel.price;
-        ramName.innerHTML = selection;
-        ramPrice.innerHTML = `£${ramModel.price}`;
-        ramDesc.innerHTML = ramModel.description;
+        userSelection(ramModel, selection, ramName, ramPrice, ramDesc);
+        priceUpdate();
     }
-    priceUpdate();
 });
 
 
@@ -232,22 +219,19 @@ let gpuOption = document.getElementById("gpu");
 let selectedGpuPrice = 0;
 
 gpuOption.addEventListener("change", () =>{
-let selection = gpuOption.value; //Gives the string value of the selected option
-
+    const selection = gpuOption.value; //returns ("gpu1", "gpu2", "gpu3")
     if(!selection){
-        gpuName.innerHTML = ``;
-        gpuPrice.innerHTML = ``;
-        gpuDesc.innerHTML = ``;
+        notUserSelection(gpuName, gpuPrice, gpuDesc);
     }
     else{
         const gpuModel = gpu[selection];
-        selectedGpuPrice = gpuModel.price;
-        gpuName.innerHTML = selection;
-        gpuPrice.innerHTML = `£${gpuModel.price}`;
-        gpuDesc.innerHTML = gpuModel.description;
+        userSelection(gpuModel, selection, gpuName, gpuPrice, gpuDesc);
+        priceUpdate();
     }
-    priceUpdate();
 });
+
+
+
 
 const computerBuild = {
     towercasePrice: selectedTowercasePrice,
