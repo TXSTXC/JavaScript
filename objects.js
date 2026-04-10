@@ -101,6 +101,7 @@ motherboardOption.addEventListener("change", () => {
     }
     else{
         const motherboardModel = motherboard[selection];
+        selectedMotherboardPrice = motherboard[selection].price;
         userSelection(motherboardModel, selection, motherboardName, motherboardPrice, motherboardDesc);
         priceUpdate();
     }
@@ -154,6 +155,7 @@ cpuOption.addEventListener("change", () => {
     }
     else{
         const cpuModel = cpu[selection];
+        selectedCpuPrice = cpu[selection].price;
         userSelection(cpuModel, selection, cpuName, cpuPrice, cpuDesc);
         priceUpdate();
     }
@@ -193,6 +195,7 @@ ramOption.addEventListener("change", () => {
     }
     else{
         const ramModel = ram[selection];
+        selectedRamPrice = ram[selection].price;
         userSelection(ramModel, selection, ramName, ramPrice, ramDesc);
         priceUpdate();
     }
@@ -225,6 +228,7 @@ gpuOption.addEventListener("change", () =>{
     }
     else{
         const gpuModel = gpu[selection];
+        selectedGpuPrice = gpu[selection].price;
         userSelection(gpuModel, selection, gpuName, gpuPrice, gpuDesc);
         priceUpdate();
     }
