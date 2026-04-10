@@ -19,11 +19,15 @@ const notUserSelection = (modelName, modelPrice, modelDesc) =>{
         modelPrice.innerHTML = ``;
         modelDesc.innerHTML = ``;
 }
+
+//Display the name, price and description
 const userSelection = (modelOption, selection, modelName, modelPrice, modelDesc) =>{
-        selectedPrice = modelOption.price;
+        let selectedPrice = modelOption.price;
+        let description = modelOption.description;
+        
         modelName.innerHTML = selection;
-        modelPrice.innerHTML = `£${modelOption.price}`;
-        modelDesc.innerHTML = modelOption.description;
+        modelPrice.innerHTML = `£${selectedPrice}`;
+        modelDesc.innerHTML = description;
 }
 
     //TOWER CASE FLOW
@@ -44,9 +48,9 @@ const towerCase = {
 
 
 
-const towercaseName = document.getElementById([towerCase-"name"]);
-const towercasePrice = document.getElementById([towerCase-"price"]);
-const towercaseDesc = document.getElementById([towerCase-"desc"]);
+const towercaseName = document.getElementById("towercase-name");
+const towercasePrice = document.getElementById("towercase-price");
+const towercaseDesc = document.getElementById("towercase-desc");
 const towerCaseOption = document.getElementById("towerCase");
 const selectedTowercasePrice = 0;
 
@@ -58,7 +62,7 @@ towerCaseOption.addEventListener("change", () => {
     }
     else{
         const towerModel = towerCase[selection];
-        userSelection(towerCase, selection, towercaseName, towercasePrice, towercaseDesc);
+        userSelection(towerModel, selection, towercaseName, towercasePrice, towercaseDesc);
         priceUpdate();
     }
 });
@@ -136,9 +140,9 @@ const cpu = {
         }        
 }
 
-// let cpuName = document.getElementById("cpu-name");
-// let cpuPrice = document.getElementById("cpu-price");
-// let cpuDesc = document.getElementById("cpu-desc");
+let cpuName = document.getElementById("cpu-name");
+let cpuPrice = document.getElementById("cpu-price");
+let cpuDesc = document.getElementById("cpu-desc");
 let cpuOption = document.getElementById("cpu");
 let selectedCpuPrice = 0;
 const cpuChoice = {
@@ -221,7 +225,7 @@ const gpu = {
     },
 }
 
-let gpuName = document.getElementById([data-point-"ram-name"]);
+let gpuName = document.getElementById("gpu-name");
 let gpuPrice = document.getElementById("gpu-price");
 let gpuDesc = document.getElementById("gpu-desc");
 let gpuOption = document.getElementById("gpu");
