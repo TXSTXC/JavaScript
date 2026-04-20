@@ -1,0 +1,64 @@
+
+.main-container{
+    display:flex;
+    width:100%;
+    padding-top: 10px;
+}
+.left-col-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    width: 30%;
+    min-height: 500px;
+}
+.right-col-container{
+    display:flex;
+    flex-direction: column;
+    width:70%;
+    min-height: 500px;
+    border: grey solid 1px;
+    background-color: lightgrey;
+}
+.rc-top-container{
+    display:flex;
+    align-items: center;
+    gap:20px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.rc-bottom-container{
+    display:flex;
+    justify-content: center;
+    gap: 30%;
+    width: 100%;
+}
+.option-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    width: 70%;
+    background-color: lightgrey;
+    border-radius: 15px;
+    padding: 10px;
+}
+.title-text{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.select-title{
+    font-size: 1.5rem;
+}
+
+
+/* IMAGERY */
+#british-army-logo{
+    width: 20%;
+    height: auto;
+    padding:10px;
+    background-color: white;
+    border-radius: 15px;
+}
