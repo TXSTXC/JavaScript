@@ -1,6 +1,22 @@
 
+        notWeaponSelected = function () {
+            weaponName.innerHTML = "";
+            weaponDescription.innerHTML = "";
+            weaponImage.src = "";
+        }
 
 
+
+
+updateWeaponInfo = function (selectedWeapon) {
+    const weaponName = document.getElementById('weapon-name');
+    const weaponDescription = document.getElementById('weapon-description');
+    const weaponImage = document.getElementById('weapon-image');
+
+        weaponName.textContent = selectedWeapon;
+        weaponDescription.textContent = weapon[selectedWeapon].description;
+        weaponImage.src = weapon[selectedWeapon].image;
+};
 
 const weapon = {
     l85A3: {
@@ -18,10 +34,6 @@ const weapon = {
 }
 
 
-
-
-
-
 const weaponSelection = document.getElementById('weapon-selection');
 
 weaponSelection.addEventListener('change', () =>{
@@ -34,15 +46,9 @@ weaponSelection.addEventListener('change', () =>{
     
     //Updates the weapon image and description based on the selected weapon
     if (!selectedWeapon){
-        weaponName.textContent = '';
-        weaponDescription.textContent = '';
-        weaponImage.src = '';
+        notWeaponSelected();
     }
-    
     else{
-        weaponName.textContent = selectedWeapon;
-        weaponDescription.textContent = weapon[selectedWeapon].description;
-        weaponImage.src = weapon[selectedWeapon].image;
-        
+    updateWeaponInfo(selectedWeapon);
     }
 });
