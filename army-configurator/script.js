@@ -4,7 +4,7 @@
 
 const weapon = {
     l85A3: {
-        image: "./media/l85a3.jpg",
+        image: "./media/sa80.jpg",
         description: "The L85A3 is the latest iteration of the L85 series, featuring improved reliability and performance. It is equipped with a new barrel, enhanced gas system, and updated ergonomics, making it a formidable weapon for modern combat scenarios."
     },
     l403A1: {
@@ -24,14 +24,25 @@ const weapon = {
 
 const weaponSelection = document.getElementById('weapon-selection');
 
-weaponSelection.addEventListener('change', function(
-    
-){
+weaponSelection.addEventListener('change', () =>{
     const selectedWeapon = weaponSelection.value;
 
-    //selected weapon value would then update the img src to the correct imaage.
-
-
-
-
-})
+    //Defines the elements to update with the selected weapon information
+    const weaponName = document.getElementById ('weapon-name');
+    const weaponDescription = document.getElementById('weapon-description');
+    const weaponImage = document.getElementById('weapon-image');
+    
+    //Updates the weapon image and description based on the selected weapon
+    if (!selectedWeapon){
+        weaponName.textContent = '';
+        weaponDescription.textContent = '';
+        weaponImage.src = '';
+    }
+    
+    else{
+        weaponName.textContent = selectedWeapon;
+        weaponDescription.textContent = weapon[selectedWeapon].description;
+        weaponImage.src = weapon[selectedWeapon].image;
+        
+    }
+});
