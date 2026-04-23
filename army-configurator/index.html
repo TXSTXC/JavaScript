@@ -21,9 +21,9 @@
                     <label for="weapon-selection" class="select-title">Select Weapon</label>
                     <select id="weapon-selection" name="WeaponSelect">
                         <option value="">Select an option</option>
-                        <option value="weapon">L85A3 (SA80) - 5.56mm</option>
-                        <option value="weapon">L403A1 (KS1) - 5.56mm</option>
-                        <option value="weapon">L7A2 (FN MAG) - 7.62mm</option>
+                        <option value="L85A3">L85A3 (SA80) - 5.56mm</option>
+                        <option value="L403A1">L403A1 (KS1) - 5.56mm</option>
+                        <option value="L7A2">L7A2 (FN MAG) - 7.62mm</option>
                     </select>
                 </div>
 
@@ -33,9 +33,8 @@
                     <label for="optic-selection" class="select-title">Select Optic</label>
                     <select id="optic-selection" name="OpticSelect">
                         <option value="">Select an option</option>
-                        <option value="optic">ACOG</option>
-                        <option value="optic">Holo sight</option>
-                        <option value="optic">Red dot sight</option>
+                        <option value="Eotech">Eotech HWS</option>
+                        <option value="Aimpoint">Aimpoint Comp M4</option>
                     </select>
                 </div>
 
@@ -45,10 +44,9 @@
                     <label for="underbarrel-attachment" class="select-title">Select Underbarrel Attachment</label>
                     <select id="underbarrel-attachment" name="UnderbarrelAttachment">
                         <option value="">Select an option</option>
-                        <option value="underbarrel">Foregrip</option>
+                        <option value="Foregrip">Foregrip</option>
                     </select>
                 </div>
-
             </div>
 
             <!-- Right Column Container -->
@@ -59,23 +57,25 @@
                 </div>
 
                 <div class="rc-bottom-container">
-                    
-                    <div id="weapon-info" class="">
-                        <p id="weapon-name"></p>
+                    <!---  WEAPON INFO  --->
+                    <div id="weapon-info" class="rc-bot-info">
+                        <p id="weapon-name" class="rcbi-header">WEAPON INFO</p>
                         <p id="weapon-description"></p>
-                        <img id="weapon-image" src="">
+                        <img id="weapon-image" class="rcbi-image" src="">
                     </div>
 
-                    <div id="optic-info" class="">
-                        <p id="optic-name" class=""></p>
+                    <!--  OPTIC INFO  -->
+                    <div id="optic-info" class="rc-bot-info">
+                        <p id="optic-name" class="rcbi-header">OPTIC INFO</p>
                         <p id="optic-description" class=""></p>
-                        <img id="optic-image" src="">
+                        <img id="optic-image" class="rcbi-image" src="">
                     </div>
 
-                    <div id="underbarrel-info" class="">
-                        <p id="underbarrel-name" class=""></p>
+                    <!--  UNDERBARREL ATTACHMENT INFO  -->
+                    <div id="underbarrel-info" class="rc-bot-info">
+                        <p id="underbarrel-name" class="rcbi-header">ATTACHMENT INFO</p>
                         <p id="underbarrel-description" class=""></p>
-                        <img id="underbarrel-att-image" src="">
+                        <img id="underbarrel-att-image" class="rcbi-image" src="">
                     </div>
 
                 </div>
