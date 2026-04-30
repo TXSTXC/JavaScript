@@ -94,7 +94,7 @@ underbarrelSelection.addEventListener('change', () =>{
     const selectedUnderbarrel = underbarrelSelection.value;
 
     if(!selectedUnderbarrel || selectedUnderbarrel === "Select an option") {
-        notOptionSelected(underbarrelName, underbarrelDescription, underbarrelImage);
+        notOptionSelected(underbarrelAttachments[selectedUnderbarrel],underbarrelName, underbarrelDescription, underbarrelImage);
     }
     else{
         updateOptionInfo(underbarrelAttachments[selectedUnderbarrel],underbarrelName, underbarrelDescription, underbarrelImage);
