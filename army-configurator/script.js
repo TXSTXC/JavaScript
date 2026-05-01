@@ -42,7 +42,7 @@ const weapon = {
 weaponSelection.addEventListener('change', () =>{
     const selectedWeapon = weaponSelection.value;
 
-    if(!selectedWeapon || selectedWeapon === "Select an option") {
+    if(!selectedWeapon) {
         notOptionSelected(weapon[selectedWeapon],weaponName, weaponDescription, weaponImage);
     }
     else{
