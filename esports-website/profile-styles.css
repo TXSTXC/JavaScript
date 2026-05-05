@@ -1,0 +1,16 @@
+.profile-header{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top:15px;
+}
+.profile-name{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.profile-pic{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}

@@ -49,10 +49,19 @@ p{
     width: 60%;
     height:auto;
 }
-.burger-menu{
+.burger-icon{
     width: 10%;
     height:60%;
     padding-right: 10px;
+}
+.header-icon{
+    width:60px;
+    height:60px;
+    border-radius: 5px;
+}
+.header-icon:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px #483d8b);
 }
 .main-text{
     width:90%;
@@ -240,6 +249,10 @@ p{
     color: #48e3ff;
     text-decoration: none;
     padding-right: 10px;
+}
+.fav-game-find-more:hover{
+    cursor: pointer;
+    color: white;
 }
 .fav-game-find-more-icon{
     height: 15px;
