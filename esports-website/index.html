@@ -64,35 +64,21 @@
 
 
                 <div class="fav-game">
-                    <div class="fav-game-icon-container">
-                        <img class="fav-game-icon" src="./media/icons/mc-helmet-icon.png">
+                    <div class=fav-game-left-container>
+                        <div class="fav-game-icon-container">
+                            <img class="fav-game-icon" src="./media/icons/mc-helmet-icon.png">
+                        </div>
+                        <div class="fav-game-text-container">
+                            <p class="fav-game-text-1">HALO Infinite</p>
+                            <p class="fav-game-text-2"><span>12,435</span>, active players.</p>
+                            <p class="fav-game-text-3"><span>3</span>, scheduled tournaments.</p>
+                        </div>
                     </div>
-                    <div class="fav-game-text-container">
-                        <p class="fav-game-text-1">HALO Infinite</p>
-                        <p class="fav-game-text-2"><span>12,435</span>, active players.</p>
-                        <p class="fav-game-text-3"><span>3</span>, scheduled tournaments.</p>
-                    </div>
-                    <div class="fav-game-rank-container">
-                        <img class="fav-game-rank-icon" src="./media/icons/halo-onyx.png">
-                        <p>ONYX</p>
-                    </div>
-                </div>
-
-
-
-
-                <div class="fav-game">
-                    <div class="fav-game-icon-container">
-                        <img class="fav-game-icon" src="./media/icons/bf6-icon.png">
-                    </div>
-                    <div class="fav-game-text-container">
-                        <p class="fav-game-text-1">Battlefield 6</p>
-                        <p class="fav-game-text-2"><span>8,920</span>, active players.</p>
-                        <p class="fav-game-text-3"><span>2</span> scheduled tournaments.</p>
-                    </div>
-                    <div class="fav-game-rank-container">
-                        <img class="fav-game-rank-icon" src="./media/icons/bf6-rank-450.png">
-                        <p>450</p>
+                    <div class="fav-game-right-container">
+                        <div class="fav-game-rank-container">
+                            <img class="fav-game-rank-icon" src="./media/icons/halo-onyx.png">
+                            <p class="fav-game-rank-text">ONYX</p>
+                        </div>
                     </div>
                 </div>
 
@@ -100,17 +86,43 @@
 
 
                 <div class="fav-game">
-                    <div class="fav-game-icon-container">
-                        <img class="fav-game-icon" src="./media/icons/lol-icon.png">
+                    <div class="fav-game-left-container">
+                        <div class="fav-game-icon-container">
+                            <img class="fav-game-icon" src="./media/icons/bf6-icon.png">
+                        </div>
+                        <div class="fav-game-text-container">
+                            <p class="fav-game-text-1">Battlefield 6</p>
+                            <p class="fav-game-text-2"><span>8,920</span>, active players.</p>
+                            <p class="fav-game-text-3"><span>2</span> scheduled tournaments.</p>
+                        </div>
                     </div>
-                    <div class="fav-game-text-container">
-                        <p class="fav-game-text-1">League of Legends</p>
-                        <p class="fav-game-text-2"><span>15,670</span>, active players.</p>
-                        <p class="fav-game-text-3"><span>4</span> scheduled tournaments.</p>
+                    <div class="fav-game-right-container">
+                        <div class="fav-game-rank-container">
+                            <img class="fav-game-rank-icon" src="./media/icons/bf6-rank-450.png">
+                            <p class="fav-game-rank-text">450</p>
+                        </div>
                     </div>
-                    <div class="fav-game-rank-container">
-                        <img class="fav-game-rank-icon" src="./media/icons/lol-diamond.png">
-                        <p>DIAMOND</p>
+                </div>
+
+
+
+
+                <div class="fav-game">
+                    <div class="fav-game-left-container">
+                        <div class="fav-game-icon-container">
+                            <img class="fav-game-icon" src="./media/icons/lol-icon.png">
+                        </div>
+                        <div class="fav-game-text-container">
+                            <p class="fav-game-text-1">League of Legends</p>
+                            <p class="fav-game-text-2"><span>15,670</span>, active players.</p>
+                            <p class="fav-game-text-3"><span>4</span> scheduled tournaments.</p>
+                        </div>
+                    </div>
+                    <div class="fav-game-right-container">
+                        <div class="fav-game-rank-container">
+                            <img class="fav-game-rank-icon" src="./media/icons/lol-diamond.png">
+                            <p class="fav-game-rank-text">DIAMOND</p>
+                        </div>
                     </div>
                 </div>
               </div>
@@ -120,7 +132,34 @@
 
 
             <!--SELECT GAMES option -> flows into a game selection UI -->
+              <div class="friends-list-container">
+                <div class="friends-list-text-container">
+                    <p class="fl-header-text">Friends List</p>
+                    <p class="fl-sub-header-text">Select a friend to view their profile.</p>
+                </div>
+                <table class="friends-table">
+                    <tr class="friend-item">
+                        <td><img class="friend-avatar" src=".//media/icons/blobby.jpg"></td>
+                        <td class="friend-name">Blobmeister</td>
+                        <td class="online">ONLINE</td>
+                    </tr>
 
+                    <tr class="friend-item">
+                        <td><img class="friend-avatar" src="./media/icons/mlg.jpg"></td>
+                        <td class="friend-name">ProPlayer456</td>
+                        <td class="online">ONLINE</td>
+                    </tr>
+
+                    <tr class="friend-item">
+                        <td><img class="friend-avatar" src="./media/icons/pepe.jpg"></td>
+                        <td class="friend-name">NoobMaster789</td>
+                        <div>
+                            <td class="offline">OFFLINE</td>
+                        </div>
+
+                    </tr>
+                </table>
+              </div>
             <!--  -->
 
 

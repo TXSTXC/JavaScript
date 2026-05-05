@@ -27,7 +27,7 @@ p{
     height:80%;
     border-radius: 20px;
     margin:0 auto;
-    background-color: darkslateblue;
+    background-color: #483d8b;
     filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
     overflow:auto;
 }
@@ -42,6 +42,7 @@ p{
     padding-top: 5px;
     padding-bottom: 5px;
     filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
+    z-index: 10;
 }
 .banner-logo{
     width: 60%;
@@ -158,6 +159,19 @@ p{
     -webkit-backdrop-filter: blur(18.7px);
     border: 1px solid rgba(255, 255, 255, 1);
 }
+.fav-game-left-container{
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:20px;
+    width:70%;
+}
+.fav-game-right-container{
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 20%;
+}
 
 .fav-text-container{
     width:100%;
@@ -203,28 +217,80 @@ p{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap:5px;
 }
 .fav-game-rank-icon{
     height: 30px;
     width: 30px;
 }
-
-
-
-
-
-.shape{
-    min-height:1000px;
-    min-width:100px;
-    background-color: white;
+.fav-game-rank-text{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #48e3ff;
 }
-.shape2{
-    min-height:1000px;
-    min-width:100px;
-    background-color: red;
+
+.friends-list-container{
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+.friends-list-text-container{
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.fl-header-text{
+font-size: 1.3rem;
+font-weight: bold;
+color: white;
+}
+.fl-sub-header-text{
+font-size: 0.9rem;
+color: lightgray;
+}
+.friends-table{
+    width:100%;
+    border-collapse: collapse;
+}
+.friend-avatar{
+height:50px;
+width:50px;
+border-radius:5px;
+}
+.friend-name{
+font-weight: 600;
+color: white;
+}
+.online{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    border-radius: 15px;
+    background: rgba(78, 184, 28, 0.50);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.offline{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    border-radius: 15px;
+    background: rgba(196, 55, 55, 0.50);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15.1px);
+    -webkit-backdrop-filter: blur(15.1px);
+}
+
+
+
+
+
+
 .footer-container{
     display: flex;
     justify-content: center;
@@ -236,10 +302,12 @@ p{
     padding-top: 10px;
     padding-bottom: 10px;
     /* From https://css.glass */
-    background: rgba(72, 61, 140, 0.34);
+    background: rgba(72, 61, 139, 0.19);
+    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12.7px);
-    -webkit-backdrop-filter: blur(12.7px);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(72, 61, 139, 1);
 }
 .footer-btn{
     display:flex;
