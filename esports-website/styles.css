@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 body{
     display: flex;
@@ -11,6 +12,12 @@ body{
 body::-webkit-scrollbar-thumb {
   background-color: black;
   outline: 1px solid black;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+p{
+    margin:0;
 }
 .mobile-container{
     display:flex;
@@ -23,13 +30,13 @@ body::-webkit-scrollbar-thumb {
     background-color: darkslateblue;
     filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
     overflow:auto;
-
-    scrollbar-width : thin;
 }
 .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color: whitesmoke;
     padding-top: 5px;
@@ -45,7 +52,207 @@ body::-webkit-scrollbar-thumb {
     height:60%;
     padding-right: 10px;
 }
-.shape{
-    min-height:10000px;
-    min-width:100px;
+.main-text{
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    gap:7px;
+    justify-content: flex-start;
+    padding-left: 10px;
 }
+.mt-sub{
+    margin:2px;
+}
+.mt1{
+    font-size: 0.8rem;
+    color: lightgray;
+    padding-top: 10px;
+}
+.mt2{
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+}
+.mt3{
+    font-size: 0.8rem;
+    color: lightgray;
+    padding-bottom: 10px;
+}
+.main-action-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+.mab-txt{
+    color: white;
+    font-weight: bold;
+}
+.quick-match-btn{
+    display: flex;
+    justify-content: center;
+    border: gray solid 1px;
+    border-radius: 15px;
+    width:35%;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.browse-btn{
+    display: flex;
+    justify-content: center;
+    border: gray solid 1px;
+    border-radius: 15px;
+    width:35%;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.app-stats-container{
+    display:flex;
+    width:100%;
+}
+.app-stats-sub-container{
+    width:33%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: gray solid 1px ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.stats-number{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #48e3ff;
+    margin:0;
+}
+.stats-label{
+    font-size: 0.7rem;
+    color: lightgray;
+    margin:0;
+}
+.fav-games-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+    width:100%;
+}
+.fav-game{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+    width:90%;
+    padding-left:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.7px);
+    -webkit-backdrop-filter: blur(18.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.fav-text-container{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:15px;
+}
+.fav-game-text{
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.fav-game-text-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.fav-game-text-1{
+    font-size: 1.3rem;
+    color:white
+}
+.fav-game-text-2, .fav-game-text-3{
+    font-size: 0.7rem;
+    color: lightgray;
+}
+.fav-game-find-more{
+    color: #48e3ff;
+    text-decoration: none;
+    padding-right: 10px;
+}
+.fav-game-find-more-icon{
+    height: 15px;
+    width: 15px;
+    margin-left: 2px;
+}
+.fav-game-icon{
+    height: 40px;
+    width: 40px;
+}
+.fav-game-rank-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.fav-game-rank-icon{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+
+.shape{
+    min-height:1000px;
+    min-width:100px;
+    background-color: white;
+}
+.shape2{
+    min-height:1000px;
+    min-width:100px;
+    background-color: red;
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:12%;
+    width: 100%;
+    position: sticky;
+    bottom:0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* From https://css.glass */
+    background: rgba(72, 61, 140, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.7px);
+    -webkit-backdrop-filter: blur(12.7px);
+}
+.footer-btn{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-btn-text{
+    font-size: 0.7rem;
+    color: lightgray;
+    margin:0;
+}
+.footer-btn-image{
+    width: 20px;
+    height: 20px;
+}
+/* Use a morphism design - NEO MORPHISM / GLASS MORPHISM
