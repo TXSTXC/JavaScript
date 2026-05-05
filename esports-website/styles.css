@@ -101,6 +101,12 @@ p{
     padding-left: 15px;
     padding-right: 15px;
 }
+.quick-match-btn:hover{
+    background-color: #ffffff;
+    color: #48e3ff;
+    border: none;
+    cursor: pointer;
+}
 .browse-btn{
     display: flex;
     justify-content: center;
@@ -111,6 +117,12 @@ p{
     padding-bottom:10px;
     padding-left: 15px;
     padding-right: 15px;
+}
+.browse-btn:hover{
+    background-color: #ffffff;
+    color: #48e3ff;
+    border: none;
+    cursor: pointer;
 }
 .app-stats-container{
     display:flex;
@@ -158,6 +170,11 @@ p{
     backdrop-filter: blur(18.7px);
     -webkit-backdrop-filter: blur(18.7px);
     border: 1px solid rgba(255, 255, 255, 1);
+}
+.fav-game:hover{
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
 .fav-game-left-container{
     display:flex;
