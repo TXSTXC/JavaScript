@@ -48,6 +48,12 @@
     -webkit-backdrop-filter: blur(13px);
     border: 1px solid rgba(255, 255, 255, 1);
 }
+.edit-profile-btn-container{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
 .edit-profile-form{
     width:90%;
     display: flex;

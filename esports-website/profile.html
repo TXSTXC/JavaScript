@@ -30,7 +30,7 @@
                 <h1 class="profile-name">TXSTXC</h1>
                 <img src="./media/icons/user-pic.jpg" class="profile-pic">            
                 <a href="#" class="edit-profile-icon">
-                    <img id="edit-profile-icon" class="edit-profile-icon" src="./media/icons/edit-icon-white.png" alt="Edit Profile">
+                <img id="edit-profile-icon" class="edit-profile-icon" src="./media/icons/edit-icon-white.png" alt="Edit Profile">
                 </a>
             </div>
 
@@ -47,11 +47,19 @@
             <div class="edit-profile-container hidden">
                 <h2 class="edit-profile-form-h2">Edit Profile</h2>
                 <form class="edit-profile-form">
+                    <input type="text" id="username" name="username" placeholder="Username" class="edit-profile-form-field">
+                    <input type="file" id="profile-picture" name="profile-picture" class="edit-profile-form-field">
+                </form>
+                <form class="edit-profile-form">
                     <input type="text" id="name" name="name" placeholder="Name" class="edit-profile-form-field">
                     <input type="number" id="age" name="age" placeholder="Age" class="edit-profile-form-field">
                     <input type="text" id="location" name="location" placeholder="Location" class="edit-profile-form-field">
-                    <button type="button" class="edit-profile-form-btn">Save Changes</button>
                 </form>
+                <div class="edit-profile-btn-container">
+                    <button type="button" class="edit-profile-form-btn">Save Changes</button>
+                    <button type="button" class="edit-profile-form-btn">Cancel</button>
+                </div>
+
             </div>
 
             <hr class="hr-divider">
