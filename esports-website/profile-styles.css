@@ -14,6 +14,24 @@
     width: 100px;
     border-radius: 10px;
 }
+.edit-profile-icon{
+    height: 30px;
+    width: 30px;
+}
+
+.profile-personal-info{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.profile-personal-info-text{
+    font-size: 0.9rem;
+    color: white;
+}
+
+
 .stats-container{
     width:100%;
     display: flex;

@@ -28,7 +28,33 @@
             <!-- PROFILE NAME + IMAGE -->
             <div class="profile-header">
                 <h1 class="profile-name">TXSTXC</h1>
-                <img src="./media/icons/user-pic.jpg" class="profile-pic">
+                <img src="./media/icons/user-pic.jpg" class="profile-pic">            
+                <a href="#" class="edit-profile-icon">
+                    <img id="edit-profile-icon" class="edit-profile-icon" src="./media/icons/edit-icon-white.png" alt="Edit Profile">
+                </a>
+            </div>
+
+            <hr class="hr-divider">
+
+            <div class="profile-personal-info">
+                <p class="profile-personal-info-text">Name: Luke</p>
+                <p class="profile-personal-info-text">Age: 32</p>
+                <p class="profile-personal-info-text">Location: Nuneaton, UK</p>
+                <p class="profile-personal-info-text">Member Since: October 2017</p>
+            </div>
+
+            <!-- EDIT PROFILE UI PAGE  -->
+            <div class="edit-profile-container">
+                <h2>Edit Profile</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location">
+                    <button type="submit">Save Changes</button>
+                </form>
             </div>
 
             <hr class="hr-divider">
@@ -119,7 +145,7 @@
 
             <!-- FOOTER --> 
              <footer class="footer-container">
-                <a href="./index.html" class="footer-btn" style="filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.8));">
+                <a href="./index.html" class="footer-btn" >
                     <img src="./media/icons/home.png" class="footer-btn-image">
                     <p class="footer-btn-text btn-home">HOME</p>
                 </a>
@@ -131,13 +157,13 @@
                     <img src="./media/icons/trophy.png" class="footer-btn-image">
                     <p class="footer-btn-text btn-tournaments">TOURNAMENTS</p>
                 </a>
-                <a href="./profile.html" class="footer-btn">
+                <a href="./profile.html" class="footer-btn" style="filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.8));">
                     <img src="./media/icons/user.png" class="footer-btn-image">
                     <p class="footer-btn-text btn-profile">PROFILE</p>
                 </a>
              </footer>
         </div>
         
-        <script src="./scripts.js" async defer></script>
+        <script src="./profile-scripts.js" async defer></script>
     </body>
 </html>

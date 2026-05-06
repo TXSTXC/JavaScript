@@ -9,10 +9,18 @@ findMoreButton.addEventListener('click', () => {
 });
 
 const findGameCancelButton = document.getElementById('find-game-cancel-btn');
-findGameCancelButton.addEventListener('click', (e) => {
+findGameCancelButton.addEventListener('click', () => {
     const gameFinderContainer = document.querySelector('.game-finder-container');
     gameFinderContainer.classList.toggle('hidden');
-    e.preventDefault();
+});
+
+const editProfileIcon = document.getElementById('edit-profile-icon')
+editProfileIcon.addEventListener('click', () => {
+
+
+
+    alert('Edit Profile feature coming soon!');
+    console.log('Edit Profile button clicked');
 });
 
 

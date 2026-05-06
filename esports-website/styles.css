@@ -220,7 +220,7 @@ input{
 }
 .fav-game-right-container{
     display:flex;
-    justify-content:flex-start;
+    justify-content:center;
     align-items: center;
     width: 20%;
 }
@@ -273,12 +273,12 @@ input{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap:5px;
 }
 .fav-game-rank-icon{
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
 }
 .fav-game-rank-text{
     font-size: 1rem;
@@ -395,11 +395,11 @@ color: white;
     width:90%;
     padding-left: 15px;
     margin-top: 5px;
-    background: rgba(72, 61, 139, 0.37);
+    background: rgba(72, 61, 139, 0.78);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.3px);
-    -webkit-backdrop-filter: blur(4.3px);
+    backdrop-filter: blur(2.1px);
+    -webkit-backdrop-filter: blur(2.1px);
     border: 1px solid rgba(72, 61, 139, 1);
 }
 .game-option-text-container{
@@ -446,11 +446,11 @@ color: white;
     bottom:0;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: rgba(72, 61, 139, 0.19);
+    background: rgba(72, 61, 139, 0.85);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.9px);
-    -webkit-backdrop-filter: blur(6.9px);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
 }
 .footer-btn{
     display:flex;
