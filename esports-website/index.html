@@ -62,23 +62,8 @@
 
                 <div class="fav-text-container">
                     <p class="fav-game-text">FAVOURITE GAMES</p>
-                    <a class="fav-game-find-more">Find More <img class="fav-game-find-more-icon" src="./media/icons/right-arrow.png"></a>
+                    <a id="find-more" class="fav-game-find-more">Find More <img class="fav-game-find-more-icon" src="./media/icons/right-arrow.png"></a>
                 </div>
-
-                <!-- UI TO POP THIS WHEN above is selected  -->
-                <div class="game-finder-container">
-                    <div class="game-option-container">
-                        <img class="game-option-image">
-                        <div class="game-option-text-container">
-                            <p>Game Name</p>
-                            <p>Active Player: <span>1,234</span></p>
-                            <p>Scheduled Tournaments: <span>5</span></p>
-                        </div>
-                    </div>
-                </div>
-
-
-
 
                 <div class="fav-game">
                     <div class=fav-game-left-container>
@@ -179,6 +164,35 @@
               </div>
 
 
+              <!-- HIDDEN UI FEATURES -->
+
+                <!-- UI TO POP THIS WHEN below is selected 'Find More' -->
+            <div class="game-finder-container hidden">
+
+                <form class="game-finder-search-form">
+                    <input type="text" class="game-finder-input" placeholder="Search for a game...">
+                    <button type="button" class="game-finder-input-search-btn">Search</button>
+                </form>
+
+                <!-- Each Game Has A Container Like This -->
+                <div class="game-option-container">
+                    <img class="game-option-image" src="./media/icons/rocket-league-icon.png">
+                    <div class="game-option-text-container">
+                        <p>Rocket League</p>
+                        <p>Active Player: <span>1,234</span></p>
+                        <p>Scheduled Tournaments: <span>5</span></p>
+                    </div>
+                </div>
+ 
+
+
+
+
+
+                <button id="find-game-cancel-btn" class="find-game-cancel-btn">Cancel</button>
+            </div>
+
+
             <!-- FOOTER --> 
              <footer class="footer-container">
                 <a class="footer-btn" style="filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.8));">
@@ -200,6 +214,6 @@
              </footer>
 
         </div>
-        <script src="" async defer></script>
+        <script src="./scripts.js" async defer></script>
     </body>
 </html>
