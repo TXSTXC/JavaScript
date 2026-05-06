@@ -81,7 +81,12 @@
     background: #483d8b;
     color: white;
 }
-
+.edit-profile-form-btn:hover{
+    background-color: #ffffff;
+    color: #48e3ff;
+    border: none;
+    cursor: pointer;
+}
 
 .stats-container{
     width:100%;
