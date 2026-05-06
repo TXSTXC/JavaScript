@@ -73,12 +73,13 @@
     width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap:10px;
 }
 .team-container{
     display: flex;
     gap:10px;
+    justify-content: flex-start;
     align-items: center;
 }
 .profile-team-sub-container{
@@ -100,6 +101,10 @@
     height: 100px;
     width: auto;
     border-radius: 15px;
+}
+.profile-team-divider{
+    width:60%;
+    border-top: #48e3ff 1px solid;
 }
 
 
