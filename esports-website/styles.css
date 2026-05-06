@@ -412,6 +412,11 @@ color: white;
     width: 50px;
     border-radius: 10px;
 }
+.game-option-text-game-name{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color:#48e3ff;
+}
 .find-game-cancel-btn{
     align-self: flex-end;
     margin-right: 5px;

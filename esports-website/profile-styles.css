@@ -14,5 +14,94 @@
     width: 100px;
     border-radius: 10px;
 }
+.stats-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.stat-highlight-blocks{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.stat-highlighted{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    width:45%;
+    padding:5px;
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.stats-h2{
+    font-weight: bold;
+    color: white;
+    margin-bottom:10px;
+}
+.stat-highlighted-game{
+    font-size: 0.8rem;
+    color: white;
+}
+.stat-highlighted-title{
+    font-size: 0.8rem;
+    color: white;
+}
+.stat-highlighted-value{
+    font-size: 0.8rem;
+    color: white;
+}
+.highlighted-game-span{
+    color:#48e3ff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.hr-divider{        
+    width:80%;
+    border-top: #48e3ff 1px solid;
+    margin-top:20px;
+}
+.profile-teams-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.team-container{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+.profile-team-sub-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.profile-team-name{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+.profile-team-stat{
+    font-size: 0.8rem;
+    color: white;
+}
+.profile-team-image{
+    height: 100px;
+    width: auto;
+    border-radius: 15px;
+}
+
+
 
 
