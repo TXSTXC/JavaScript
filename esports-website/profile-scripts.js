@@ -1,9 +1,6 @@
 
 const editProfileIcon = document.getElementById('edit-profile-icon')
 editProfileIcon.addEventListener('click', () => {
-
-
-
-    alert('Edit Profile feature coming soon!');
-    console.log('Edit Profile button clicked');
+    const editProfileContainer = document.querySelector('.edit-profile-container');
+        editProfileContainer.classList.toggle('hidden');
 });
