@@ -27,7 +27,7 @@
 
             <!-- PROFILE NAME + IMAGE -->
             <div class="profile-header">
-                <h1 class="profile-name">TXSTXC</h1>
+                <h1 id="profile-username" class="profile-name">TXSTXC</h1>
                 <img src="./media/icons/user-pic.jpg" class="profile-pic">            
                 <a href="#" class="edit-profile-icon">
                 <img id="edit-profile-icon" class="edit-profile-icon" src="./media/icons/edit-icon-white.png" alt="Edit Profile">
@@ -37,10 +37,10 @@
             <hr class="hr-divider">
 
             <div class="profile-personal-info">
-                <p class="profile-personal-info-text">Name: Luke</p>
-                <p class="profile-personal-info-text">Age: 32</p>
-                <p class="profile-personal-info-text">Location: Nuneaton, UK</p>
-                <p class="profile-personal-info-text">Member Since: October 2017</p>
+                <p class="profile-personal-info-text">Name: <span id="profile-name">Luke</span></p>
+                <p class="profile-personal-info-text">Age: <span id="profile-age">32</span></p>
+                <p class="profile-personal-info-text">Location: <span id="profile-location">Nuneaton, UK</span></p>
+                <p class="profile-personal-info-text">Member Since: <span id="profile-member-since">October 2017</span></p>
             </div>
 
             <!-- EDIT PROFILE UI PAGE  -->
@@ -59,7 +59,6 @@
                     <button type="button" class="edit-profile-form-btn">Save Changes</button>
                     <button type="button" class="edit-profile-form-btn">Cancel</button>
                 </div>
-
             </div>
 
             <hr class="hr-divider">
