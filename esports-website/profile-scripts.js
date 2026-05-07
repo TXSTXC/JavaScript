@@ -31,15 +31,21 @@ const nameInput = document.getElementById('name');
 const ageInput = document.getElementById('age');
 const locationInput = document.getElementById('location');
 
-updateProfileInfo = function(){
+updateProfileInfo = function() {
+    const usernameInputValue = usernameInput.value;
+    const profilePictureFile = profilePictureInput.files[0];
+    const nameInputValue = nameInput.value;
+    const ageInputValue = ageInput.value;
+    const locationInputValue = locationInput.value;
 
+    // Update the profile display on the page
+    usernameInput.innerHTML = usernameInputValue;
+    nameInput.innerHTML = nameInputValue;
+    ageInput.innerHTML = ageInputValue;
+    locationInput.innerHTML = locationInputValue;
 };
 
-
-
-
-
-//GRabs the COntainer for the EDIT PROFILE button
+//GRabs the Container for the EDIT PROFILE button
 const editProfileContainer = document.querySelector('.edit-profile-container');
 
 //Event Listener for the Edit Profile Button and the Cancel Button
@@ -51,20 +57,8 @@ editProfileIcon.addEventListener('click', () => {
 //Event Listener for the Save Changes Button
 const saveChangesButton = document.querySelector('.edit-profile-btn-container .edit-profile-form-btn:nth-child(1)');
 saveChangesButton.addEventListener('click', () => {
- 
     updateProfileInfo();
-
-
-
-
     //password change to come soon....
-
-    console.log('Username:', usernameInputValue);
-    console.log('Profile Picture:', profilePictureFile);
-    console.log('Name:', nameInputValue);
-    console.log('Age:', ageInputValue);
-    console.log('Location:', locationInputValue);
-
     editProfileContainer.classList.toggle('hidden');
 });
 
