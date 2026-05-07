@@ -1,11 +1,77 @@
 
+
+
+class UserAccount {
+    constructor(username, password, profilePicture, name, age, location, activeTeams, memberSince){
+        this.username = username;
+        this.password = password;
+        this.profilePicture = profilePicture;
+        this.name = name;
+        this.age = age;
+        this.location = location;
+        this.activeTeams = activeTeams;
+        this.memberSince = memberSince;
+    }
+};
+
+const TXSTXC = {
+    username: "TXSTXC",
+    password: "password123",
+    profilePicture: "./media/icons/user-pic.jpg",
+    name: "Luke",
+    age: 32,
+    location: "Nuneaton, UK",
+    activeTeams: ["Ethereal esports", "BATTLEFIELD with the BOYZ"],
+    memberSince: "October 2017"
+};
+
+const usernameInput = document.getElementById('username');
+const profilePictureInput = document.getElementById('profile-picture');
+const nameInput = document.getElementById('name');
+const ageInput = document.getElementById('age');
+const locationInput = document.getElementById('location');
+
+updateProfileInfo = function(){
+
+};
+
+
+
+
+
+//GRabs the COntainer for the EDIT PROFILE button
+const editProfileContainer = document.querySelector('.edit-profile-container');
+
+//Event Listener for the Edit Profile Button and the Cancel Button
 const editProfileIcon = document.getElementById('edit-profile-icon')
 editProfileIcon.addEventListener('click', () => {
-    const editProfileContainer = document.querySelector('.edit-profile-container');
         editProfileContainer.classList.toggle('hidden');
 });
+
+//Event Listener for the Save Changes Button
+const saveChangesButton = document.querySelector('.edit-profile-btn-container .edit-profile-form-btn:nth-child(1)');
+saveChangesButton.addEventListener('click', () => {
+ 
+    updateProfileInfo();
+
+
+
+
+    //password change to come soon....
+
+    console.log('Username:', usernameInputValue);
+    console.log('Profile Picture:', profilePictureFile);
+    console.log('Name:', nameInputValue);
+    console.log('Age:', ageInputValue);
+    console.log('Location:', locationInputValue);
+
+    editProfileContainer.classList.toggle('hidden');
+});
+
+//Event Listener for the Cancel Button
 const editProfileCancelButton = document.querySelector('.edit-profile-btn-container .edit-profile-form-btn:nth-child(2)');
 editProfileCancelButton.addEventListener('click', () => {
-    const editProfileContainer = document.querySelector('.edit-profile-container');
-        editProfileContainer.classList.toggle('hidden');
+    editProfileContainer.classList.toggle('hidden');
 });
+
+
