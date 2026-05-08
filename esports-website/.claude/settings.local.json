@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\lukev\\\\OneDrive - Clockwork IT Ltd\\\\Desktop\\\\My Stuff\\\\CODE\\\\IT Online Learning Diploma\\\\JavaScript\\\\esports-website\" -Filter \"*.css\" -Recurse)",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}

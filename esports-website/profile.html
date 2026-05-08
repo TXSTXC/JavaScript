@@ -4,18 +4,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Ready UP Esports</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./profile-styles.css">
         <link rel="stylesheet" href="./styles.css">
 
+
+
     </head>
     <body>
 
-
-
-                <!-- Main Mobile Screen Container -->
+        <!-- Main Mobile Screen Container -->
         <div class="mobile-container">
 
             <!-- Header Container -->
@@ -41,19 +41,22 @@
                 <p class="profile-personal-info-text">Age: <span id="profile-age">32</span></p>
                 <p class="profile-personal-info-text">Location: <span id="profile-location">Nuneaton, UK</span></p>
                 <p class="profile-personal-info-text">Member Since: <span id="profile-member-since">October 2017</span></p>
+                <p class="profile-personal-info-text">Bio: <span id="profile-bio">I am the BigDog - GG</span></p>
+                <p class="profile-personal-info-text">User ID: <span class="profile-user-id">#0018852</span></p>
             </div>
 
             <!-- EDIT PROFILE UI PAGE  -->
             <div class="edit-profile-container hidden">
                 <h2 class="edit-profile-form-h2">Edit Profile</h2>
                 <form class="edit-profile-form">
-                    <input type="text" id="username" name="username" placeholder="Username" class="edit-profile-form-field">
-                    <input type="file" id="profile-picture" name="profile-picture" class="edit-profile-form-field">
+                    <input type="text" id="edit-username" name="username" placeholder="Username" class="edit-profile-form-field">
+                    <input type="file" id="edit-profile-picture" name="profile-picture" class="edit-profile-form-field">
                 </form>
                 <form class="edit-profile-form">
-                    <input type="text" id="name" name="name" placeholder="Name" class="edit-profile-form-field">
-                    <input type="number" id="age" name="age" placeholder="Age" class="edit-profile-form-field">
-                    <input type="text" id="location" name="location" placeholder="Location" class="edit-profile-form-field">
+                    <input type="text" id="edit-name" name="name" placeholder="Name" class="edit-profile-form-field">
+                    <input type="number" id="edit-age" name="age" placeholder="Age" class="edit-profile-form-field">
+                    <input type="text" id="edit-location" name="location" placeholder="Location" class="edit-profile-form-field">
+                    <textarea id="edit-bio" name="profile-bio" placeholder="Bio" class="edit-profile-form-field"></textarea>
                 </form>
                 <div class="edit-profile-btn-container">
                     <button type="button" class="edit-profile-form-btn">Save Changes</button>
