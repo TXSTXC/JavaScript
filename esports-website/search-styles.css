@@ -33,9 +33,10 @@
     justify-content:center;
     align-items: center;
     border-bottom: #48e3ff 1px solid;
-    padding-bottom:10px}
+    padding-bottom:10px
+}
 .main-option-text{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: white;
 }
@@ -64,18 +65,20 @@
     gap:5px;
     border:none;
     padding:10px 0px 10px 0px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-}
-.search-sub-container:hover{
     background: rgba(255, 255, 255, 0.42);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.54);
+}
+.search-sub-container:hover{
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 1);
     cursor: pointer;
 }
 .search-text{
@@ -88,6 +91,7 @@
 }
 .search-text-sub-count{
     color: #48e3ff;
+    margin-left:5px;
 }
 
 .search-recent-players-container{
