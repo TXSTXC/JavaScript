@@ -212,3 +212,16 @@
     -webkit-backdrop-filter: blur(13px);
     border: 1px solid rgba(255, 255, 255, 1);
 }
+.search-cancel-btn{
+    padding: 5px 10px;
+    background: #483d8b;
+    color: white;
+    border:none;
+    border-radius: 15px;
+}
+.search-cancel-btn:hover{
+    background-color: #ffffff;
+    color: #48e3ff;
+    border: none;
+    cursor: pointer;    
+}

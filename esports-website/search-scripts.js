@@ -1,14 +1,6 @@
 
 
 
-function searchCancelButton () {
- const searchCancelButton = document.querySelector('.search-cancel-btn');
- cancelButton.addEventListener('click', (input) =>{
-    const canceButtonID = input;
-     cancelButtonId.classList.toggle('hidden');
- })
-
-};
 
 
 //CREATE A LOBBY
@@ -18,6 +10,11 @@ createLobbyBtn.addEventListener('click', () => {
     createLobbyContainer.classList.toggle('hidden');
 });
 
+const lobbyCancelButton = document.getElementById('lobby-search-cancel-button');
+lobbyCancelButton.addEventListener('click', () =>{
+    const createLobbyContainer = document.querySelector('.create-lobby-search-container');
+    createLobbyContainer.classList.toggle('hidden');
+})
 
 
 //SEARCH PLAYERS
@@ -27,9 +24,20 @@ searchPlayersBtn.addEventListener('click', () => {
     searchPlayersContainer.classList.toggle('hidden');
 }); 
 
+const playerCancelButton = document.getElementById('player-search-cancel-button');
+playerCancelButton.addEventListener('click', () =>{
+    const searchPlayerContainer = document.querySelector('.search-players-search-container');
+    searchPlayerContainer.classList.toggle('hidden');
+})
+
 //MATCH FINDER
 const matchFinderBtn = document.getElementById('search-games-container');
 matchFinderBtn.addEventListener('click', () =>{
+    const matchFinderContainer = document.querySelector('.match-finder-search-container');
+    matchFinderContainer.classList.toggle('hidden');
+})
+const matchCancelBtn = document.getElementById('match-search-cancel-button');
+matchCancelBtn.addEventListener('click', () =>{
     const matchFinderContainer = document.querySelector('.match-finder-search-container');
     matchFinderContainer.classList.toggle('hidden');
 })
