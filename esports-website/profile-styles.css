@@ -102,7 +102,15 @@ input[type="file"]::file-selector-button:hover{
     border: none;
     cursor: pointer;
 }
-
+.profile-platform-container{
+    display: flex;
+    justify-content: flex-start;
+    gap:5px;
+}
+.profile-platform-icon{
+    width: 20px;
+    height:20px;
+}
 .stats-container{
     width:100%;
     display: flex;
@@ -155,7 +163,7 @@ input[type="file"]::file-selector-button:hover{
 }
 .hr-divider{        
     width:80%;
-    border-top: #48e3ff 1px solid;
+    height: 2px;
     margin-top:20px;
 }
 .profile-teams-container{

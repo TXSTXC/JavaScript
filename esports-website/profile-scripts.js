@@ -5,7 +5,7 @@
 for future use when login process exists...
 
 class UserAccount {
-    constructor(username, password, profilePicture, name, age, location, activeTeams, memberSince){
+    constructor(username, password, profilePicture, name, age, location, activeTeams, steamId, gamertag, psn, memberSince){
         this.username = username;
         this.password = password;
         this.profilePicture = profilePicture;
@@ -13,6 +13,9 @@ class UserAccount {
         this.age = age;
         this.location = location;
         this.activeTeams = activeTeams;
+        this.steamId = steamId;
+        this.gamertag = gamertag;
+        this.psn = psn;
         this.memberSince = memberSince;
     }
 };
@@ -25,6 +28,9 @@ const TXSTXC = {
     age: 32,
     location: "Nuneaton, UK",
     activeTeams: ["Ethereal esports", "BATTLEFIELD with the BOYZ"],
+    steamId: "TXSTXC",
+    gamertag: "TXSTXC",
+    psn: "",
     memberSince: "October 2017"
 };
 */

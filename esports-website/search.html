@@ -47,23 +47,51 @@
             </div>
 
             
+
             <!-- CONTAINER FOR SEARCH BUTTONS -->
             <div class="search-options-container">
-                <button class="search-sub-container create-lobby-container">
+                <button id="create-lobby-btn" class="search-sub-container create-lobby-container">
                     <p class="search-text">Create a Lobby</p>
                     <p class="search-text-sub">Friends Online:<span class="search-text-sub-count">2</span></p>
                 </button>                
-                <button class="search-sub-container search-players-container">
+                <button id="player-finder-btn" class="search-sub-container search-players-container">
                     <p class="search-text">Player Finder</p>
                     <p class="search-text-sub">Active Players:<span class="search-text-sub-count">45,934</span></p>
                 </button>
-                <button class="search-sub-container search-games-container">
+                <button id="search-games-container" class="search-sub-container search-games-container">
                     <p class="search-text">Match Finder</p>
                     <p class="search-text-sub">Pending Matches:<span class="search-text-sub-count">1,853</span></p>
                 </button>
             </div>
 
-            <!-- RECENT PLAYERS LIST -->
+                <!-- CONTAINERS FOR FILTERS -->
+
+                <!-- CREATE LOBBY CONTAINER -->
+            <div class="create-lobby-search-container hidden">
+
+
+                <button class="search-cancel-btn">Cancel</button>
+            </div>
+
+            <!-- SEARCH PLAYERS CONTAINER -->
+            <div class="search-players-search-container hidden">
+
+
+                <button class="search-cancel-btn">Cancel</button>
+            </div>
+            <!-- MATCH FINDER CONTAINER -->
+            <div class="match-finder-search-container hidden">
+
+
+                <button class="search-cancel-btn">Cancel</button>
+            </div>
+
+
+
+
+
+
+                <!-- RECENT PLAYERS LIST -->
             <div class="search-recent-players-container">
                             <!--RECENTS LIST-->
                 <div class="friends-list-text-container">
@@ -137,6 +165,6 @@
              </footer>
         </div>
         
-        <script src="./scripts.js" async defer></script>
+        <script src="./search-scripts.js"></script>
     </body>
 </html>
