@@ -16,6 +16,20 @@ lobbyCancelButton.addEventListener('click', () =>{
     createLobbyContainer.classList.toggle('hidden');
 })
 
+// Lobby Visibility
+const lobbyVisibilityOption = document.getElementById('search-visibility-select');
+lobbyVisibilityOption.addEventListener('click', () =>{
+    if (lobbyVisibilityOption.value === "Private"){
+
+        const lobbyCodeNum = Math.floor(Math.random() * 90000) + 10000;
+        const lobbyCode = document.getElementById('search-lobby-code');
+        lobbyCode.innerHTML = lobbyCodeNum;
+
+        const codeBox = document.getElementById('code-generator');
+        codeBox.classList.toggle('hidden');
+    } 
+})
+
 
 //SEARCH PLAYERS
 const searchPlayersBtn = document.getElementById('player-finder-btn');

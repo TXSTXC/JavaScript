@@ -68,10 +68,29 @@
 
                 <!-- CREATE LOBBY CONTAINER -->
             <div class="create-lobby-search-container hidden">
-                <div>game selection</div>
-                <div>Region</div>
-                <div>Visibility</div>
-                <div>Code if private</div>
+                <select class="search-dropdown" name:="search-game-select" id="search-game-select">
+                    <option value="" selected disabled hidden>Game Select</option>
+                    <option>HALO Infinite</option>
+                    <option>Call of Duty: B07</option>
+                    <option>BATTLEFIELD: 6</option>
+                    <option>League of Legends</option>
+                    <option>Rocket League</option>
+                    <option>PUBG</option>
+                </select>
+                <select class="search-dropdown" name="search-region-select" id="search-region-select">
+                    <option value="" selected disabled hidden>Region Select</option>
+                    <option>United Kingdom</option>
+                    <option>Europe</option>
+                    <option>US: East</option>
+                    <option>US: West</option>
+                    <option>ASIA</option>
+                </select>
+                <select class="search-dropdown" name="search-visibility" id="search-visibility-select">
+                    <option value="" selected disabled hidden>Lobby Visibility</option>
+                    <option>Private</option>
+                    <option>Public</option>
+                </select>
+                <p class="search-dropdown hidden" id="code-generator" class="code-generator hidden">Lobby Code: <span id="search-lobby-code">345774</span></p>
 
                 <button id="lobby-search-cancel-button" class="search-cancel-btn">Cancel</button>
             </div>

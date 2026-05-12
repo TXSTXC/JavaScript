@@ -212,6 +212,12 @@
     -webkit-backdrop-filter: blur(13px);
     border: 1px solid rgba(255, 255, 255, 1);
 }
+.create-lobby-search-container{
+
+}
+#search-game-select{
+    margin-top: 15px;
+}
 .search-cancel-btn{
     padding: 5px 10px;
     background: #483d8b;
@@ -224,4 +230,12 @@
     color: #48e3ff;
     border: none;
     cursor: pointer;    
+}
+.search-dropdown{
+    width: 70%;
+    padding: 10px;
+    border-radius:10px;
+    border:none;
+    background:#483d8b;
+    color:white;
 }
