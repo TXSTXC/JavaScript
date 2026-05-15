@@ -212,20 +212,33 @@
     -webkit-backdrop-filter: blur(13px);
     border: 1px solid rgba(255, 255, 255, 1);
 }
-.create-lobby-search-container{
 
+.search-game-container{
+    
 }
 #search-game-select{
     margin-top: 15px;
 }
-.search-cancel-btn{
+.search-lobby-btn{
     padding: 5px 10px;
     background: #483d8b;
     color: white;
     border:none;
     border-radius: 15px;
 }
-.search-cancel-btn:hover{
+.search-lobby-cancel-btn{
+    padding: 5px 10px;
+    background: rgb(153, 18, 18);
+    color: white;
+    border:none;
+    border-radius: 15px;
+    
+}
+.search-lobby-cancel-btn:hover{
+    border: none;
+    cursor: pointer;    
+}
+.search-lobby-btn:hover{
     background-color: #ffffff;
     color: #48e3ff;
     border: none;
@@ -238,4 +251,13 @@
     border:none;
     background:#483d8b;
     color:white;
+}
+.search-lobby-code{
+   font-weight: 600; 
+}
+.create-lobby-search-lower-btn-container{
+    width:90%;
+    display:flex;
+    justify-content: center;
+    gap:15px;
 }

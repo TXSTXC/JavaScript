@@ -99,7 +99,7 @@ saveChangesButton.addEventListener('click', () => {
     resetEditProfileInfo();
 });
 //Event Listener for the Cancel Button
-const editProfileCancelButton = document.querySelector('.edit-profile-btn-container .edit-profile-form-btn:nth-child(2)');
+const editProfileCancelButton = document.querySelector('.edit-profile-cancel-btn');
 editProfileCancelButton.addEventListener('click', () => {
     editProfileContainer.classList.toggle('hidden');
     resetEditProfileInfo();

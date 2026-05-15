@@ -87,12 +87,22 @@
                 </select>
                 <select class="search-dropdown" name="search-visibility" id="search-visibility-select">
                     <option value="" selected disabled hidden>Lobby Visibility</option>
-                    <option>Private</option>
-                    <option>Public</option>
+                    <option value="private">Private</option>
+                    <option value="public">Public</option>
                 </select>
-                <p class="search-dropdown hidden" id="code-generator" class="code-generator hidden">Lobby Code: <span id="search-lobby-code">345774</span></p>
+                <p class="search-dropdown hidden" id="code-generator" class="code-generator hidden">Lobby Code: <span id="search-lobby-code" class="search-lobby-code"></span></p>
 
-                <button id="lobby-search-cancel-button" class="search-cancel-btn">Cancel</button>
+                <div class="search-game-container">
+                    <img id="search-game-selection-img" class="search-game-selection-img" src="">
+                    <img id="search-region-selection-img" class="search-region-selection-img" src="">
+                </div>
+
+                <!-- Cancel and Create Container -->
+                <div class="create-lobby-search-lower-btn-container">
+                    <button id="lobby-search-cancel-button" class="search-lobby-cancel-btn">Cancel</button>
+                    <button id="lobby-search-create-btn" class="search-lobby-btn">Create</button>
+                </div>
+
             </div>
 
             <!-- SEARCH PLAYERS CONTAINER -->
