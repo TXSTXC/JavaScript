@@ -7,7 +7,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
 
@@ -17,17 +17,31 @@
             <a>MY LISTS</a>
             <a>PROFILE</a>
         </header>
-        <div id="ul-container" class="ul-container">
-            <ul id="ul-todo" class=ul>
 
-            </ul>
-            <ul id="ul-done" class="ul">
-
-            </ul>
+        <div class="input-container">
+            <input type="text" id="input-todo" placeholder="Add a new task...">
+            <button id="add-btn">Add to List</button>            
         </div>
 
 
-        <footer></footer>
+        <div id="ul-container" class="ul-container">
+            <!-- TO DO LIST -->
+             <h2>To Do</h2>
+            <ul id="ul-todo" class="ul">
+
+            </ul>
+            <!-- DONE LIST -->
+            <h2>Done</h2>
+            <ul id="ul-done" class="ul">
+
+            </ul>
+
+        </div>
+
+
+        <footer>
+
+        </footer>
 
 
 
@@ -35,6 +49,6 @@
 
 
         
-        <script src="" async defer></script>
+        <script src="./script.js" async defer></script>
     </body>
 </html>
