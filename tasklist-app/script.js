@@ -9,18 +9,22 @@ function addItem() {
 
     //take the input from the input field and assign to a variable.
     const newTask = input.value;
-
     //create a new list item element
     const listItem = document.createElement('li');
     listItem.textContent = newTask;
-
     //append the new list item to the TO DO list
     todoList.appendChild(listItem);
-
     //clear the input field
     input.value = '';
 }
 
-document.getElementById('add-btn').addEventListener('click', addItem);{
-    addItem();
-}
+
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', function() {
+    if(input.value === ''){
+        alert('Please enter a task before adding to the list.');
+    }
+    else{
+        addItem();
+    }
+});
