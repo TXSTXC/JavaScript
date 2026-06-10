@@ -4,9 +4,10 @@
 const todoList = document.getElementById('ul-todo');
 const input = document.getElementById('input-todo');
 
+
+
 //function to add a new item into the .#ul-todo
 function addItem() {
-
     //take the input from the input field and assign to a variable.
     const newTask = input.value;
     //create a new list item element
@@ -28,3 +29,4 @@ addBtn.addEventListener('click', function() {
         addItem();
     }
 });
+

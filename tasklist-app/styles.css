@@ -19,3 +19,9 @@ body{
     align-items: center;
     margin-bottom: 20px;
 }
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
