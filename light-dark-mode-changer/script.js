@@ -16,3 +16,7 @@ function toggleTheme (){
 }
 
 themeToggle.addEventListener('click', toggleTheme);
+
+const myFunction = () => {
+
+}
