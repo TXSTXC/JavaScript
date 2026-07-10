@@ -1,12 +1,7 @@
 
 /*Instructions:
 
-Setup:
-Open your script.js file in a text editor where you'll implement JavaScript functions for array manipulation.
-Initialize the Array:
 
-Start by initializing an empty array using let array = [];. This array will store elements that you'll manipulate using different array methods
-Implementing Array Methods:
 Push Method: Write a function addElement() that retrieves an element from an input field (elementInput) and adds it to the end of the array using array.push(element).
 
 Pop Method: Implement a function to remove the last element from the array using array.pop() when a "Remove Last" button is clicked.
@@ -37,16 +32,38 @@ Test each array method individually to ensure they correctly modify the array an
 Validate user inputs and handle edge cases such as empty arrays or invalid operations gracefully.
 */
 
+
+const bookShift = document.getElementById("bookShift");
+const bookUnshift = document.getElementById("bookUnshift");
+const bookSplice = document.getElementById("bookSplice");
+const arrayElements = document.getElementById("arrayElements");
+
+
 let booksList = [];
 
+//Grabs the button and adds event listeners to it
+const bookPush = document.getElementById("bookPush");
+bookPush.addEventListener("click", pushArray);
+//Grabs the input ID and the function Inputs a book at the end of the Array
+const bookInput = document.getElementById("bookInput");
+function pushArray() {
+    booksList.push(bookInput.value);
+}
+
+//Grabs the button and adds an event listener to it.
+const bookPop = document.getElementById("bookPop");
+bookPop.addEventListener("click", popArray);
+//Removes a book at the end of the Array
 function popArray() {
     booksList.pop();
 };
 
+//Removes the first element of an Array
 function shiftArray() {
     booksList.shift();
 };
 
+//Inputs a book at the start of the Array
 function unshiftArray() {
     booksList.unshift();
 };
