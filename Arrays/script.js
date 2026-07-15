@@ -14,26 +14,13 @@ themeToggle.addEventListener('click', toggleTheme);
 /*Instructions:
 
 
-ForEach Method: Write a function displayArray() that iterates through the array using array.forEach() to display each element in the designated HTML area (#arrayElements).
+- ForEach Method: Write a function displayArray() that iterates through the array using array.forEach() to display each element in the designated HTML area (#arrayElements).
 
 Displaying Array State:
 
 Implement a function displayArray() that updates the HTML to display all elements in the array after each operation (push, pop, shift, unshift, splice).
 
 Use DOM manipulation to update the content of the #arrayElements div with the current state of the array. Each element should be displayed with an appropriate format (e.g., "Element 1: value").
-
-Testing and Validation:
-Test each array method individually to ensure they correctly modify the array and update the displayed results
-Validate user inputs and handle edge cases such as empty arrays or invalid operations gracefully.
-4. Styling (Optional):
-
-Use styles.css to enhance the visual presentation of your mini project, focusing on clarity and user interaction.
-5. Testing and Validation:
-
-Test each array method individually to ensure they correctly modify the array and update the displayed results.
-Validate user inputs and handle edge cases such as empty arrays or invalid operations gracefully.
-*/
-
 
 /*
     const listItem = document.createElement('li');
