@@ -58,16 +58,26 @@ function popArray() {
     booksList.pop();
 };
 
+//Grabs the button and adds an event listener to it.
+const bookShift = document.getElementById('bookShift');
+bookShift.addEventListener('click', shiftArray);
 //Removes the first element of an Array
 function shiftArray() {
     booksList.shift();
 };
 
+//Grabs the button and adds an event listener to it.
+const bookUnshift = document.getElementById('bookUnshift');
+bookUnshift.addEventListener('click', unshiftArray);
 //Inputs a book at the start of the Array
 function unshiftArray() {
-    booksList.unshift();
+    booksList.unshift(bookInput.value);
 };
 
+//Grabs the button and adds an event listener to it.
+const bookSplice = document.getElementById('bookSplice');
+bookSplice.addEventListener('click', spliceArray);
+//specify which item to remove from the Array
 function spliceArray() {
     booksList.splice();
 };
