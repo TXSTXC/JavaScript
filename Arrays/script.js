@@ -46,7 +46,7 @@ bookPush.addEventListener("click", pushArray);
 //Grabs the input ID and the function Inputs a book at the end of the Array
 const bookInput = document.getElementById("bookInput");
 function pushArray() {
-    booksList.push(bookInput.value);
+    booksList.push(bookInput.value.toLowerCase());
 }
 
 //Grabs the button and adds an event listener to it.
@@ -70,7 +70,7 @@ const bookUnshift = document.getElementById('bookUnshift');
 bookUnshift.addEventListener('click', unshiftArray);
 //Inputs a book at the start of the Array
 function unshiftArray() {
-    booksList.unshift(bookInput.value);
+    booksList.unshift(bookInput.value.toLowerCase());
 };
 
 //Grabs the button and adds an event listener to it.
@@ -79,8 +79,15 @@ bookSplice.addEventListener('click', spliceArray);
 //specify which item to remove from the Array
 function spliceArray() {
     //This currently does not account for multiples of the same. I dont know how this works...
-    const index = booksList.indexOf(spliceInput.value);
-    booksList.splice(index, 1);
+    const index = booksList.indexOf(spliceInput.value.toLowerCase());
+    if (index === -1) {
+        alert("Book not found in the list.");
+        return;
+    }
+    else{
+        booksList.splice(index, 1);    
+    }
+    
 };
 
 
