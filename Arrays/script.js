@@ -35,10 +35,31 @@ Validate user inputs and handle edge cases such as empty arrays or invalid opera
 */
 
 
+/*
+    const listItem = document.createElement('li');
+    listItem.textContent = newTask;
+    listItem.className = 'list-item';
+
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.className = 'remove-btn';
+    removeBtn.addEventListener('click', function() {
+        listItem.remove();
+        doneList.appendChild(listItem);
+        removeBtn.remove(); 
+    });
+
+    listItem.appendChild(removeBtn);     
+    todoList.appendChild(listItem);           
+    input.value = '';
+*/
+
+
 const arrayElements = document.getElementById("arrayElements");
+const booksArray = [];
 
 
-const booksList = [];
+
 
 //Grabs the button and adds event listeners to it
 const bookPush = document.getElementById("bookPush");
@@ -46,7 +67,11 @@ bookPush.addEventListener("click", pushArray);
 //Grabs the input ID and the function Inputs a book at the end of the Array
 const bookInput = document.getElementById("bookInput");
 function pushArray() {
-    booksList.push(bookInput.value.toLowerCase());
+    const listItem = document.createElement('li');
+    listItem.textContent = bookInput.value;
+    listItem.className = 'list-item';
+    booksArray.push(bookInput.value.toLowerCase());
+    bookList.appendChild(listItem);
 }
 
 //Grabs the button and adds an event listener to it.
@@ -54,15 +79,17 @@ const bookPop = document.getElementById("bookPop");
 bookPop.addEventListener("click", popArray);
 //Removes a book at the end of the Array
 function popArray() {
-    booksList.pop();
-};
+    booksArray.pop();
+    bookList.removeChild(bookList.lastChild);
+}
 
 //Grabs the button and adds an event listener to it.
 const bookShift = document.getElementById('bookShift');
 bookShift.addEventListener('click', shiftArray);
 //Removes the first element of an Array
 function shiftArray() {
-    booksList.shift();
+    booksArray.shift();
+    bookList.removeChild(bookList.firstChild);
 };
 
 //Grabs the button and adds an event listener to it.
@@ -70,7 +97,7 @@ const bookUnshift = document.getElementById('bookUnshift');
 bookUnshift.addEventListener('click', unshiftArray);
 //Inputs a book at the start of the Array
 function unshiftArray() {
-    booksList.unshift(bookInput.value.toLowerCase());
+    booksArray.unshift(bookInput.value.toLowerCase());
 };
 
 //Grabs the button and adds an event listener to it.
@@ -78,16 +105,21 @@ const bookSplice = document.getElementById('bookSplice');
 bookSplice.addEventListener('click', spliceArray);
 //specify which item to remove from the Array
 function spliceArray() {
-    //This currently does not account for multiples of the same. I dont know how this works...
-    const index = booksList.indexOf(spliceInput.value.toLowerCase());
+    //This currently does not account for multiples of the same.
+    //  I dont know how this works...
+    //It just removes the first instance of the item in the array, and not all of them.
+    const index = booksArray.indexOf(spliceInput.value.toLowerCase());
     if (index === -1) {
         alert("Book not found in the list.");
         return;
     }
     else{
-        booksList.splice(index, 1);    
+        booksArray.splice(index, 1);    
     }
     
 };
+
+
+
 
 
