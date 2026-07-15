@@ -12,22 +12,26 @@
     <body>
 
 
+        <header class="header">
+            <button id="theme-toggle">Toggle Theme</button>
+        </header>
+
         <h1>Your list of books</h1>
 
-        <div>
+        <div id="arrayElements"></div>
+
+        <div class="button-container">
             <input type="text" id="bookInput" placeholder="Type a book title">
-            <button id="bookPush">Add Book to End</button>
+            <button id="bookPush" class="button">Add Book to End</button>
 
-            <button id="bookPop">Remove Last Book</button>
+            <button id="bookPop" class="button">Remove Last Book</button>
 
-            <button id="bookShift">Remove First Book</button>
+            <button id="bookShift" class="button">Remove First Book</button>
 
-            <button id="bookUnshift">Add Book to Start</button>
+            <button id="bookUnshift" class="button">Add Book to Start</button>
 
-            <button id="bookSplice">Remove Book by Index</button>
-
-            <div id="arrayElements"></div>
-
+            <input type="text" id="spliceInput" placeholder="Type a book title">
+            <button id="bookSplice" class="button">Remove Book by Index</button>
             
         </div>
 

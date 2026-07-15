@@ -1,16 +1,18 @@
 
+//Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', toggleTheme);
+    function toggleTheme(){
+        if (document.body.getAttribute('data-theme') === 'dark') {
+            document.body.setAttribute('data-theme', 'light');
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+        }
+    };
+
+
 /*Instructions:
 
-
-Push Method: Write a function addElement() that retrieves an element from an input field (elementInput) and adds it to the end of the array using array.push(element).
-
-Pop Method: Implement a function to remove the last element from the array using array.pop() when a "Remove Last" button is clicked.
-
-Shift Method: Write a function to remove the first element from the array using array.shift() when a "Remove First" button is clicked.
-
-Unshift Method: Implement a function to add an element to the beginning of the array using array.unshift(element) when an "Add First" button is clicked.
-
-Splice Method: Create a function removeElement(index) that removes an element at a specific index from the array using array.splice(index, 1).
 
 ForEach Method: Write a function displayArray() that iterates through the array using array.forEach() to display each element in the designated HTML area (#arrayElements).
 
@@ -33,13 +35,10 @@ Validate user inputs and handle edge cases such as empty arrays or invalid opera
 */
 
 
-const bookShift = document.getElementById("bookShift");
-const bookUnshift = document.getElementById("bookUnshift");
-const bookSplice = document.getElementById("bookSplice");
 const arrayElements = document.getElementById("arrayElements");
 
 
-let booksList = [];
+const booksList = [];
 
 //Grabs the button and adds event listeners to it
 const bookPush = document.getElementById("bookPush");
@@ -79,5 +78,9 @@ const bookSplice = document.getElementById('bookSplice');
 bookSplice.addEventListener('click', spliceArray);
 //specify which item to remove from the Array
 function spliceArray() {
-    booksList.splice();
+    //This currently does not account for multiples of the same. I dont know how this works...
+    const index = booksList.indexOf(spliceInput.value);
+    booksList.splice(index, 1);
 };
+
+

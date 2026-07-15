@@ -1,5 +1,45 @@
+
+:root{
+    --background-color: #ffffff;
+    --color: #000000;
+        /*Buttons*/
+    --button-background-color: #333333;
+    --button-color: #ffffff;
+
+}
+body[data-theme="dark"] {
+    --background-color: #000000;
+    --color: #ffffff;
+
+    /*Buttons*/
+    --button-background-color:#ffffff;
+    --button-color: #333333;
+}
+
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    margin: 10px;
+    border:none;
+    color: var(--button-color);
+    background-color: var(--button-background-color);
 }
