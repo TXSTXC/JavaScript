@@ -68,11 +68,10 @@ bookShift.addEventListener('click', shiftArray);
 //Removes the first element of an Array
 function shiftArray() {
     if (booksArray.length === 0) {
-        alert(inputEmptyMessage);
         return;
     }
     booksArray.shift();
-    bookList.removeChild(bookList.firstChild);
+    displayArray();
     clearInput();
 };
 
@@ -83,11 +82,11 @@ bookUnshift.addEventListener('click', unshiftArray);
 //Inputs a book at the start of the Array
 function unshiftArray() {
     if (!bookInput.value.trim()) {
-        alert(inputEmptyMessage);
         clearInput();
         return;
     }
     booksArray.unshift(bookInput.value.toLowerCase());
+    displayArray();
     clearInput();
 };
 
@@ -105,9 +104,8 @@ function spliceArray() {
         clearInput();
         return;
     }
-    else{
-        booksArray.splice(index, 1);    
-    }
+    booksArray.splice(index, 1);
+    displayArray();
     clearInput();
 };
 
