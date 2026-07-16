@@ -54,11 +54,10 @@ bookPop.addEventListener("click", popArray);
 //Removes a book at the end of the Array
 function popArray() {
     if (booksArray.length === 0) {
-        alert(inputEmptyMessage);
         return;
     }
     booksArray.pop();
-    bookList.removeChild(bookList.lastChild);
+    displayArray();
     clearInput();
 }
 
