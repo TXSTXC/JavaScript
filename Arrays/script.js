@@ -136,7 +136,26 @@ bookPickerBtn.addEventListener('click', ()=> {
     });
 });
 
-//TO DO - .filter to create a bespoke LOTR Array to display.
+//Filter button
+const filterButton = document.getElementById('filter-btn');
+filterButton.addEventListener('click', function() {
+    const filterInput = document.getElementById('filter-input');
+    const filterInputValue = filterInput.value;
+    if (isNaN(filterInputValue) || filterInputValue < 0 || filterInputValue > 100){
+        alert("Please eneter a valid character count.")
+        return
+    }
+    const filteredArray = booksArray.filter(bookName => bookName.length > filterInputValue);
+
+    const filteredList = document.getElementById('filtered-list');
+    filteredList.innerHTML = '';
+    filteredArray.forEach((bookName) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${bookName}`;
+        listItem.className = 'list-item';
+        filteredList.appendChild(listItem);
+    });
+});
 
 
 
