@@ -28,28 +28,34 @@
         <div class="button-container">
             <div class="input-container">
                 <input type="text" id="bookInput" placeholder="Type a book title">
-                <button id="bookPush" class="button">Add Book to End</button>              
+                <button id="bookUnshift" class="button">Add Book to Start</button>
+                <button id="bookPush" class="button">Add Book to End</button>      
             </div>
 
-
-            <button id="bookPop" class="button">Remove Last Book</button>
-
-            <button id="bookShift" class="button">Remove First Book</button>
-
-            <button id="bookUnshift" class="button">Add Book to Start</button>
+                <button id="bookShift" class="button">Remove First Book</button>
+                <button id="bookPop" class="button">Remove Last Book</button>
 
             <div class="input-container">
                 <input type="text" id="spliceInput" placeholder="Type a book title">
                 <button id="bookSplice" class="button">Remove Book by Index</button>
+            </div>
+
+            <!-- BOOK PICKER -->
+            <div class="book-picker-container">
+                <button id="book-picker-btn" class="button">Pick a Book to read!</button>
+                <ul id="book-picker-list" class="book-picker-list">
+
+                </ul>
+            </div>
+
+            <div class="filter-container">
+                <input type="text" id="filter-input" placeholder="Insert number to filter">
+                <button id="filter-btn" class="button">Filter</button>
 
             </div>
 
             
         </div>
-
-
-
-        
         <script src="./script.js" async defer></script>
     </body>
 </html>

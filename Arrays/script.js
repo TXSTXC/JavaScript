@@ -19,6 +19,7 @@ function displayArray () {
     //This clears my Array in the HTML.
     bookList.innerHTML = '';
     booksArray.forEach((bookName,index) => {
+        //if (!array.contains(bookName)) For duplication
         const listItem = document.createElement('li');
         listItem.textContent = `${index}: ${bookName}`;
         listItem.className = 'list-item';
@@ -28,7 +29,7 @@ function displayArray () {
 function clearInput() {
     bookInput.value = '';
     spliceInput.value = '';
-}
+};
 
 //PUSH PUSH PUSH
 //Grabs the button and adds event listeners to it
@@ -108,6 +109,36 @@ function spliceArray() {
     displayArray();
     clearInput();
 };
+
+//Array to store the random book
+const randomBook = [];
+const randomBookList = document.getElementById('book-picker-list');
+//Random book Picker
+const bookPickerBtn = document.getElementById('book-picker-btn');
+bookPickerBtn.addEventListener('click', ()=> {
+    //wipes the array so it can contain ONLY the newly selected ranom book.
+    randomBook.splice(0, randomBook.length);
+    //This clears my Array in the HTML.
+    randomBookList.innerHTML = '';
+
+    const randomIndex = Math.floor(Math.random() * booksArray.length);
+    const randomBookIndex = booksArray[randomIndex];
+    randomBook.push(randomBookIndex);
+    randomBook.forEach((bookName) => {
+        if (booksArray.length === 0) {
+        alert("No books added yet!");
+        return;
+    }
+        const listItem = document.createElement('li');
+        listItem.textContent = `${bookName}`;
+        listItem.className = 'list-item';
+        randomBookList.appendChild(listItem);
+    });
+});
+
+//TO DO - .filter to create a bespoke LOTR Array to display.
+
+
 
 
 
