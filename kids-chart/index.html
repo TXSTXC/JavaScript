@@ -20,15 +20,31 @@
             <!-- LEFT CONTAINER -->
             <div class="main-con-left">
                 <!-- MAIN TITLE -->
-                <h1>Create your own CHART!</h1>
-                <!-- Chart Selection Dropdown -->
-                <select  id="chart-type-select" preview="">
-                    <option value="behaviour" selected>Behaviour</option>
-                    <option value="goal-setting">Goal Setting</option>
-                    <option value="potty-training">Potty Training</option>
-                </select>
-                <!-- Child Name Input -->
-                <input type="text" id="name-input" placeholder="Input child name">
+                <img id="chart-logo-main" src="./media/main-page/chart-creator.png">
+                <div class="mcl-sub">
+                    <!-- Chart Selection Dropdown -->
+                    <label>Select you chart theme:</label>
+                    <select  id="chart-type-select" preview="">
+                        <option value="behaviour" selected>Behaviour</option>
+                        <option value="potty-training">Potty Training</option>
+                    </select>
+                </div>
+                <div class="mcl-sub">
+                    <label>Select your chart colour:</label>
+                    <select id="chart-theme-select" preview="Select an option">
+                        <option value="blue">Blue</option>
+                        <option value="pink">Pink</option>
+                    </select>
+                </div>
+
+                <div class="mcl-sub">
+                    <!-- Child Name Input -->
+                     <label>Child Name</label>
+                    <input type="text" id="name-input" placeholder="">                    
+                </div>
+
+
+
             </div>
             <!-- RIGHT CONTAINER -->
             <div class="main-con-right">

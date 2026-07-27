@@ -1,3 +1,40 @@
+/* COLOUR STYLING */
+:root{
+    --background-color: #ffffff;
+    --color: #000000;
+    --background-image: (url:)  /* not sure if this is right?  */
+}
+
+[data-theme="dark"] {
+    --background-color: #000000;
+    --color: #ffffff;
+}
+
+/* SIZING STYLING */
+
+/* Screen sizes 991px AND BELOW */
+@media (max-width: 991px){
+
+}
+/* Screen sizes 1025 and BELOW */
+@media (max-width: 1025){
+
+}
+/* Screen sizes 1281 and BELOW */
+@media (max-width: 1281){
+
+}
+/* Screen sizes 1282px AND ABOVE */
+@media (min-width: 1282) {
+
+}
+
+html, body {
+    background-color: var(--background-color);
+    color: var(--color);
+    transition: all 0.3s ease;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -18,6 +55,13 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap:10px;
+}
+.mcl-sub{
+    width:20%;
+    display:flex;
+    flex-direction: column;
+    gap: 2px;
 }
 .main-con-right{
     width: 45%;
@@ -38,4 +82,9 @@ footer{
     width:100%;
     display: flex;
     justify-content: center;
+}
+
+
+#chart-logo-main{
+    width: 100%;
 }
