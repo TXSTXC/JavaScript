@@ -8,6 +8,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
     </head>
     <body>
 
@@ -21,33 +25,38 @@
             <div class="main-con-left">
                 <!-- MAIN TITLE -->
                 <img id="chart-logo-main" src="./media/main-page/chart-creator.png">
-                <div class="mcl-sub">
-                    <!-- Chart Selection Dropdown -->
-                    <label>Select you chart theme:</label>
-                    <select  id="chart-type-select" preview="">
-                        <option value="behaviour" selected>Behaviour</option>
-                        <option value="potty-training">Potty Training</option>
-                    </select>
-                </div>
-                <div class="mcl-sub">
-                    <label>Select your chart colour:</label>
-                    <select id="chart-theme-select" preview="Select an option">
-                        <option value="blue">Blue</option>
-                        <option value="pink">Pink</option>
-                    </select>
+                <div class="mcl-sub-con">
+                    <div class="mcl-sub">
+                        <!-- Chart Selection Dropdown -->
+                        <label>Select you chart theme:</label>
+                        <select  id="chart-type-select" preview="">
+                            <option value="behaviour" selected>Behaviour</option>
+                            <option value="potty-training">Potty Training</option>
+                        </select>
+                    </div>
+                    <div class="mcl-sub">
+                        <label>Select your chart colour:</label>
+                        <select id="chart-theme-select" preview="Select an option">
+                            <option value="blue">Blue</option>
+                            <option value="pink">Pink</option>
+                        </select>
+                    </div>
+
+                    <div class="mcl-sub">
+                        <!-- Child Name Input -->
+                        <label>Childs Name:</label>
+                        <input type="text" id="name-input" placeholder="">                    
+                    </div>
                 </div>
 
-                <div class="mcl-sub">
-                    <!-- Child Name Input -->
-                     <label>Child Name</label>
-                    <input type="text" id="name-input" placeholder="">                    
-                </div>
 
 
 
             </div>
             <!-- RIGHT CONTAINER -->
+
             <div class="main-con-right">
+                <h2 class="dp-font" style="font-size: xxx-large; margin:0px;">Your Chart Preview:</h2>
                 <h2 class="temp-preview">PREVIEW WILL GO HERE!</h2>
             </div>
 
