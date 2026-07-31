@@ -2,54 +2,43 @@
 
 //Create an object to store the theme values for colour and style.
 
-
+function consoleLogValues() {
+    console.log(`"themeValue =" ${themeValue}`);
+    console.log(`"colourValue =" ${colourValue}`);
+    console.log(`"templateValue =" ${templateValue}`);
+}
 
 //Grab the theme of the CHART
 const chartTheme = document.getElementById('chart-theme-select');
-let themeValue = null;
+let themeValue = 0;
 chartTheme.addEventListener('change', function () {
-    if (themeValue === null){
-        themeValue = chartTheme.value === "behaviour" ? 1 : 2;
-        console.log(`"ThemeValue =" ${themeValue}`);
-        console.log(`"templateValue =" ${templateValue}`);
-        return;
-    }
-    if(themeValue === 1){
-        themeValue = 2;
-        templateValue = 2;
-        console.log(`"ThemeValue =" ${themeValue}`);
-        console.log(`"templateValue =" ${templateValue}`);
-        return;
-    }
-    if (themeValue === 2){
+    if (chartTheme.value === "behaviour"){
         themeValue = 1;
-        templateValue = 1;
-        console.log(`"ThemeValue =" ${themeValue}`);
-        console.log(`"templateValue =" ${templateValue}`);
-        return;
+        templateValue = themeValue + colourValue; 
+        consoleLogValues();       
     }
-    if ([4, 8].includes(templateValue)){
-        themeValue = chartTheme.value === "behaviour" ? 1 : 2;
-        themeValue += templateValue
-        console.log(`"ThemeValue =" ${themeValue}`);
-        console.log(`"templateValue =" ${templateValue}`);
-        return;
-    }
-    if ([5,6,9,10].includes(templateValue)){
-        return;
+    if (chartTheme.value === "potty-training"){
+        themeValue = 2;
+        templateValue = themeValue + colourValue;
+        consoleLogValues();      
     }
 });
 
 //Grab the Colour Style for the chart
 const colourStyle = document.getElementById('chart-colour-select');
-let colourValue = null;
+let colourValue = 0;
 colourStyle.addEventListener('change', function () {
-    if (templateValue === 4 || 8){
-        colourValue = colourStyle.value === "blue" ? 4 : 8;
-        templateValue = templateValue + colourValue;
-        console.log(colourValue);
-    }
 
+    if (colourStyle.value === "blue"){
+        colourValue = 4;
+        templateValue = colourValue + themeValue;
+        consoleLogValues();
+    }
+    if (colourStyle.value === "pink"){
+        colourValue = 8;
+        templateValue = colourValue + themeValue;
+        consoleLogValues();      
+    }
 });
 
 //Grab the value from nameInput
@@ -60,10 +49,10 @@ const previewButton = document.getElementById('pre-btn');
 const generateButton = document.getElementById('gen-btn');
 
 //This may need moving up if not working.
-let templateValue = null;
+let templateValue = 0;
 
 previewButton.addEventListener('click', function (){
-    if (templateValue === null){
+    if (![5,6,9,10].includes(templateValue)){
         alert("Please complete all requirements to preview a template.")
     }
 });
