@@ -1,5 +1,6 @@
 
 
+//Create an object to store the theme values for colour and style.
 
 
 
@@ -7,13 +8,34 @@
 const chartTheme = document.getElementById('chart-theme-select');
 let themeValue = null;
 chartTheme.addEventListener('change', function () {
-    if ((templateValue === 4) || 8){
+    if (themeValue === null){
         themeValue = chartTheme.value === "behaviour" ? 1 : 2;
-        templateValue = templateValue + themeValue;
         console.log(`"ThemeValue =" ${themeValue}`);
         console.log(`"templateValue =" ${templateValue}`);
+        return;
     }
-    if ((templateValue === null) || 1 || 2 || 5 || 6 || 9 || 10){
+    if(themeValue === 1){
+        themeValue = 2;
+        templateValue = 2;
+        console.log(`"ThemeValue =" ${themeValue}`);
+        console.log(`"templateValue =" ${templateValue}`);
+        return;
+    }
+    if (themeValue === 2){
+        themeValue = 1;
+        templateValue = 1;
+        console.log(`"ThemeValue =" ${themeValue}`);
+        console.log(`"templateValue =" ${templateValue}`);
+        return;
+    }
+    if ([4, 8].includes(templateValue)){
+        themeValue = chartTheme.value === "behaviour" ? 1 : 2;
+        themeValue += templateValue
+        console.log(`"ThemeValue =" ${themeValue}`);
+        console.log(`"templateValue =" ${templateValue}`);
+        return;
+    }
+    if ([5,6,9,10].includes(templateValue)){
         return;
     }
 });
