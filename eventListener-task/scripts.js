@@ -1,48 +1,56 @@
 
 
 
+for (let i = 1; i <= 4; i++) {
+    const button = document.getElementById(`add-image${i}`);
+    button.addEventListener("click", () => {
+        const fileInput = document.getElementById(`file-input${i}`);
+        const image = document.getElementById(`image${i}`);
+        addImage(fileInput, image);
+    });
+}
+
+function addImage(fileInput, image) {
+    if (!fileInput.files || fileInput.files.length === 0) {
+        alert("Please select an image to upload.");
+        return;
+    }
+    image.src = URL.createObjectURL(fileInput.files[0]);
+}
+
+/*
+
 //Can this be optimised? I feel like it can be but I don't know how to do it.
 const button1 = document.getElementById("add-image1");
 button1.addEventListener("click", () => {
-    const imageInput = document.getElementById("file-input1");
-    addImage(imageInput.value);
+    const fileInput = document.getElementById("image1-input");
+    const file = fileInput.files[0];
+    const image = document.getElementById('image1');
+    image.src = URL.createObjectURL(file);
+    addImage(file, image, button1);
 });
-const button2 = document.getElementById("add-image2");
-button2.addEventListener("click", () => {
-    const imageInput = document.getElementById("file-input2");
-    addImage(imageInput.value);
-});
-const button3 = document.getElementById("add-image3");
-button3.addEventListener("click", () => {
-    const imageInput = document.getElementById("file-input3");
-    addImage(imageInput.value);
-});
-const button4 = document.getElementById("add-image4");
-button4.addEventListener("click", () => {
-    const imageInput = document.getElementById("file-input4");
-    addImage(imageInput.value);
-});
-
-
 
 //CREATE THE IMAGE 'function' HERE
-function addImage(attachment, imageOption) {
+function addImage(attachment, image, button) {
     if(attachment === ""){
         alert("Please select an image to upload.");
     }
-    if(imageOption === "option1"){
-        imageOption.src = attachment;
-    }
-    if(imageOption === "option2"){
-        imageOption.src = attachment;
-    }
-    if(imageOption === "option3"){
-        imageOption.src = attachment;
-    }
-    if(imageOption === "option4"){
-        imageOption.src = attachment;
+    if(attachment !== ""){
+        if (button === "add-image1") {
+            image.src = attachment;
+        }
+        if (button === "add-image2") {
+            image.src = attachment;
+        }
+        if (button === "add-image3") {
+            image.src = attachment;
+        }
+        if (button === "add-image4") {
+            image.src = attachment;
+        }        
     }
     else{
         alert("something unexpected happened... Hmm... Please try again.");
     }
 };
+*/
