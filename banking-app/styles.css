@@ -1,0 +1,184 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.mobile-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:390px;
+    height:844px;
+    border-radius: 20px;
+    margin:0 auto;
+    /*background-color: #483d8b;*/
+    background-color: #072853;
+    filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
+    overflow:auto;
+}
+.header-con{
+    width:100%;
+    height: 10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #eeeeee;
+}
+.logo{
+    width:85%;
+    height: 100%;
+    background-image: url(./media/bank-logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.user-icon{
+    width: 15%;
+    height: 50%;
+}
+.account-con{
+    width:100%;
+    height: 20%;
+    background-color: #eeeeee;
+    color: #000000;
+    margin-top: 5px;
+    display:flex;
+    flex-direction: column;
+}
+.acc-info{
+    width:100%;
+    height: 33.33%;
+    display:flex;
+    align-items:center;
+}
+.acc-title{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+    margin-left: 10px;
+    color: #072853;
+    font-weight: bold;
+}
+.acc-value{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.2rem;
+}
+.balance-con{
+    width:100%;
+    height: 10%;
+    background-color: #eeeeee;
+    color: #000000;
+    margin-top: 5px;
+    display:flex;
+    align-items:center;
+}
+.balance-title{
+    width: 100%;
+    height: 50%;
+    display:flex;
+    align-items:center;
+    margin-left: 10px;
+    color: #072853;
+    font-weight: bold;
+}
+.balance-value{
+    width: 100%;
+    height: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.5rem;
+}
+.actions-con{
+    width:100%;
+    height: 10%;
+    background-color: #eeeeee;
+    color: #000000;
+    margin-top: 5px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.action-btn{
+    border:none;
+    background-color: #072853;
+    color: #072853;
+    height: 80%;
+    width: 40%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: rgba(7, 40, 83, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border: 1px solid rgba(7, 40, 83, 0.29);
+}
+.action-btn:hover{
+    background-color: #072853;
+    color: #eeeeee;
+    cursor:pointer;
+}
+.history-con{
+    width:100%;
+    height: 50%;
+    background-color: #eeeeee;
+    color: #000000;
+    margin-top: 5px;
+    display:flex;
+    flex-direction: column;
+}
+.transaction-line{
+    height: 20%;
+    display:flex;
+    gap:30px;
+    padding-left: 10px;
+}
+.deposit-ui{
+    display:flex;
+    gap:10px;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-color: #eeeeee;
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    background: rgba(7, 40, 83, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border: 1px solid rgba(7, 40, 83, 0.29);    
+}
+.submit-btn{
+    border:none;
+    background-color: #072853;
+    color: white;
+    height: 20%;
+    width: 60%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: #072853;
+    border-radius: 16px;
+}
+.hidden{
+    display:none;
+}
+.input-field{
+    border:none;
+    background-color: #ffffff;
+    color: #000000;
+    height: 20%;
+    width: 60%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
