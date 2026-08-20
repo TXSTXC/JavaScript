@@ -10,11 +10,12 @@ for (let i = 1; i <= 4; i++) {
     });
 }
 
-function addImage(fileInput, image) {
+function addImage(fileInput, image, button) {
     if (!fileInput.files || fileInput.files.length === 0) {
         alert("Please select an image to upload.");
         return;
     }
+    console.log(fileInput.files[0])
     image.src = URL.createObjectURL(fileInput.files[0]);
 }
 

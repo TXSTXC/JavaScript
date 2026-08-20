@@ -21,42 +21,48 @@
             <div class="account-con">
                 <div class="acc-l1 acc-info">
                     <p class="acc-title">NAME:</p>
-                    <p class="acc-value">Luke Varga</p>
+                    <p id="user-name" class="acc-value">Luke Varga</p>
                 </div>
                 <div class="acc-l2 acc-info">
                     <p class="acc-title">ACC NO:</p>
-                    <p class="acc-value">59473945</p>
+                    <p id="user-account-number" class="acc-value">59473945</p>
                 </div>
                 <div class="acc-l3 acc-info">
                     <p class="acc-title">SORT CODE:</p>
-                    <p class="acc-value">30-30-30</p>
+                    <p id="user-sort-code" class="acc-value">30-30-30</p>
                 </div>
             </div>
             <!-- Balance -->
             <div class="balance-con">
                 <p class="balance-title">CURRENT BALANCE:</p>
-                <p class="balance-value">£1,234.56</p>
+                <p id="user-balance" class="balance-value">£1,234.56</p>
             </div>
             <!-- Actions -->
             <div class="actions-con">
                 <button id="transfer-btn" class="action-btn">Transfer</button>
                 <button id="deposit-btn" class="action-btn">Deposit</button>
             </div>
+            <div class="deposit-ui hidden">
+                <input type="number" id="deposit-input" class="input-field" placeholder="Enter amount to deposit">
+                <input type="text" id="deposit-description" class="input-field" placeholder="Enter description">
+                <button id="deposit-submit-btn" class="submit-btn">Submit</button>
+                <button id="deposit-cancel-btn" class="submit-btn">Cancel</button>
+            
+            </div>
+
+            <div class="transfer-ui hidden">
+                <input type="number" id="transfer-input" class="input-field" placeholder="Enter amount to deposit">
+                <input type="text" id="transfer-description" class="input-field" placeholder="Enter description">
+                <button id="transfer-submit-btn" class="submit-btn">Submit</button>
+                <button id="transfer-cancel-btn" class="submit-btn">Cancel</button>
+            </div>
             <!-- History -->
             <div class="history-con">
-                <div class="transaction-line">
-                    <p class="transact-date">10/10/10</p>
-                    <p class="transact-amount"> £450.78</p>
-                    <p class="transact-detail">Transfer Info Transfer Info Transfer Info</p>
-                </div>
+                <ul id="user-history">
+                </ul>
             </div>
         </div>
 
-        <div class="deposit-ui hidden">
-            <input type="number" id="deposit-input" class="input-field" placeholder="Enter amount to deposit">
-            <button id="deposit-submit-btn" class="submit-btn">Submit</button>
-        </div>
-
-        <script src="./script.js" async defer></script>
+        <script src="./script.js" defer></script>
     </body>
 </html>
