@@ -137,21 +137,28 @@ function displayHistory() {
 
     userHistory.innerHTML = '';
     userAccount.history.forEach(transaction => {
+        console.log(transaction);
         const transactionLine = document.createElement('li');
+        const transactionDate = document.createElement('span');
+        transactionDate.classList.add('transactionDate');
+        transactionDate.textContent = transaction.date;
         transactionLine.classList.add('transaction-line');
         const sign = transaction.amount >= 0 ? '+' : '-';
         const amount = Math.abs(transaction.amount);
         transactionLine.textContent =
             `${sign} £${amount.toFixed(2)} || ${transaction.detail}`;
         userHistory.appendChild(transactionLine);
+        transactionLine.appendChild(transactionDate);
     });
 }
 
 //Creates a transaction line that goes into the userAccount.history
 class CreateTransactionLine {
     constructor (date, amount, detail){
-        this.date = date;
+        this.date = new Date(date).toLocaleString("en-GB", { timeZone: "UTC" });
         this.amount = amount;
         this.detail = detail;
     }
 }
+
+//Updating the above so it now created multiple <li>, which are apended within the transactionLine
