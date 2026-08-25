@@ -1,7 +1,7 @@
 
 
-
-
+//FORM SUBMISSION LOGIC
+const entryList = [];
 
 const entryForm = document.querySelector('.form-container');
 entryForm.addEventListener('submit', (event) =>{
@@ -15,7 +15,15 @@ entryForm.addEventListener('submit', (event) =>{
         description: entryDesc
     };
 
-    localStorage.setItem('mySavedEntry', JSON.stringify(myEntry));
+    entryList.push(myEntry);
+
+     localStorage.setItem('entries', JSON.stringify(entryList))
 
     entryForm.reset();
 });
+
+
+//HOME PAGE ARRAY LOGIC
+
+
+
