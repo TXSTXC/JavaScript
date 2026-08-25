@@ -170,6 +170,13 @@ p{
 #edit-icon{
     width: 50px;
 }
+.swn-link{
+    margin-top: 25px;
+    text-decoration: none;
+    color: #5c5c5e;
+    border-bottom: 2px black solid;
+
+}
 .footer{
     width: 100%;
     display: flex;
