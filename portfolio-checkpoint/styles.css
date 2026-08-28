@@ -196,3 +196,6 @@ p{
 .footer p{
     margin-left: 20px;
 }
+.hidden{
+    display:none;
+}
