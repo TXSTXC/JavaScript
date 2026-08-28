@@ -6,21 +6,50 @@ console.log("Entries loaded on the Home Page:", homeEntries);
 //Grab rows for assignment
 
 
-
-
-function refreshEntries() {
 //wipe all of the custom tile elements
 //refresh them with the latest homeEntries array items
 //Class per tile 'row-con{i] left / right (for loop to generate the latest {i}?)
 
-
-//Cave a function that creates all the correct tags and values; linked to the array.
-
-
-
-
-
+function refreshEntries() {
+    //This will remove all rows and tiles.
 };
+
+//3 ROW CREATION FUNCTION
+function createRow(fiveEntries) {
+    homeEntries.forEach((_,index) => { //Creates rows 1 - 3.
+        for (j=0; j<=1; j++){ //creates Left and Right tiles.
+            const row = document.createElement('div');
+            row.classList.add("main-row", `row-con${index}`)
+                if (j === 0){
+                    row.classList.add(`row-con${index}`, `row${index}-left`);
+                    createElements(row, index);
+                }
+                else {
+                    row.classList.add(`row-con${index}`, `row${index}-right`);
+                    createElements(row, index);
+                };
+                const mainRow = document.querySelector('.main-row').appendChild(row);
+        };
+    });
+};
+
+function createElements (row,index) {
+    const tileDate = document.createElement('p');
+    tileDate.innerText = homeEntries[index].date; 
+    row.appendChild(tileDate);
+
+    const tileSubject = document.createElement('h2');
+    tileSubject.innerText = homeEntries[index].subject;
+    row.appendChild(tileSubject);
+
+    const tileDesc = document.createElement('p');
+    tileDesc.innerText = homeEntries[index].description;
+    row.appendChild(tileDesc)
+
+    tileDesc.classList.add('entry-para');
+};
+
+createRow(homeEntries);
 
 
 

@@ -100,44 +100,44 @@ p{
     border-radius: 8px;
     margin-bottom: 50px;
 }
-.row1-l{
+.row0-l{
     width:70%;
     padding: 20px;
     background-color: #f5fbfb;
+}
+.row0-l:hover{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+}
+.row0-r{
+    width:30%;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.row0-r:hover{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
+}
+.row1-l{
+    width:30%;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 .row1-l:hover{
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
 }
 .row1-r{
-    width:30%;
-    padding: 20px;
-    background-color: #f0f0f0;
-}
-.row1-r:hover{
-    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
-}
-.row2-l{
-    width:30%;
-    padding: 20px;
-    background-color: #f0f0f0;
-}
-.row2-l:hover{
-    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
-}
-.row2-r{
     width:70%;
     padding: 20px;
     background-color: #f5fbfb;
 }
-.row2-r:hover{
+.row1-r:hover{
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
 }
-.row3{
+.row2{
     width:100%;
     padding:20px;
     background-color: #f0f0f0;
 }
-.row3:hover{
+.row2:hover{
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
 }
 .tags-con{
