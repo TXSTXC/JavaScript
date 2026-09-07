@@ -82,8 +82,14 @@ p{
     color: #7a7a7a;
     margin: 0;
 }
+.entry-title{
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
 .entry-para{
     line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 .row-container{
     width:100%;
@@ -94,20 +100,19 @@ p{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     box-shadow: 13px 34px 54px -14px rgba(0, 0, 0, 0.24);
     border-radius: 8px;
     margin-bottom: 50px;
 }
 .main-row-70{
     width:70%;
-    gap:50px;
+    min-width: 0;
 }
 .main-row-30{
     width:30%;
-    gap:50px;
+    min-width: 0;
 }
 .row0-l{
     width:100%;
