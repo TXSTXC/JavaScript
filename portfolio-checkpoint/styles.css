@@ -67,6 +67,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .main-top{
     width: 100%;
@@ -97,6 +98,7 @@ p{
     gap: 50px;
 }
 .row-con{
+    height:80%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -109,13 +111,16 @@ p{
 .main-row-70{
     width:70%;
     min-width: 0;
+    min-height: 360px;
 }
 .main-row-30{
     width:30%;
     min-width: 0;
+    min-height: 360px;
 }
 .row0-l{
     width:100%;
+    min-height: 60%;
     padding: 20px;
     background-color: #f5fbfb;
 }
@@ -124,6 +129,7 @@ p{
 }
 .row0-r{
     width:100%;
+    min-height: 60%;
     padding: 20px;
     background-color: #f0f0f0;
 }
@@ -132,6 +138,7 @@ p{
 }
 .row1-l{
     width:100%;
+    min-height: 60%;
     padding: 20px;
     background-color: #f0f0f0;
 }
@@ -140,6 +147,7 @@ p{
 }
 .row1-r{
     width:100%;
+    min-height: 60%;
     padding: 20px;
     background-color: #f5fbfb;
 }
