@@ -1,6 +1,6 @@
 //Declares and grabs my data from the local storage
 const homePageEntries = JSON.parse(localStorage.getItem('userEntries')) || [];
-const homeEntries = homePageEntries.slice(-5).reverse();
+const homeEntries = homePageEntries.slice(-4).reverse();
 console.log("Entries loaded on the Home Page:", homeEntries);
 
 //Grab rows for assignment
@@ -10,27 +10,67 @@ console.log("Entries loaded on the Home Page:", homeEntries);
 //refresh them with the latest homeEntries array items
 //Class per tile 'row-con{i] left / right (for loop to generate the latest {i}?)
 
-function refreshEntries() {
-    //This will remove all rows and tiles.
-};
+const tileSelectors = ['.row0-l', '.row0-r', '.row1-l', '.row1-r', '.row2'];
 
-//3 ROW CREATION FUNCTION
-function createRow(fiveEntries) {
-    homeEntries.forEach((_,index) => { //Creates rows 1 - 3.
-        for (j=0; j<=1; j++){ //creates Left and Right tiles.
-            const row = document.createElement('div');
-            row.classList.add("main-row", `row-con${index}`)
-                if (j === 0){
-                    row.classList.add(`row-con${index}`, `row${index}-left`);
-                    createElements(row, index);
-                }
-                else {
-                    row.classList.add(`row-con${index}`, `row${index}-right`);
-                    createElements(row, index);
-                };
-                const mainRow = document.querySelector('.main-row').appendChild(row);
-        };
+function populateEntries() {
+    homeEntries.forEach((entry, index) => {
+        // Find the specific tile container using its unique class
+        const tile = document.querySelector(tileSelectors[index]);
+
+        if (tile && entry) {
+            // 1. Target the date paragraph (the first <p> inside the tile)
+            const datePara = tile.querySelector('p');
+            if (datePara) datePara.innerText = entry.date || '';
+
+            // 2. Target the subject heading
+            const heading = tile.querySelector('h2');
+            if (heading) heading.innerText = entry.subject || '';
+
+            // 3. Target the description paragraph
+            const descPara = tile.querySelector('.entry-para');
+            if (descPara) descPara.innerText = entry.description || '';
+        }
     });
+}
+
+populateEntries();
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+// 3 ROW / ENTRY CREATION FUNCTION USING A FOR LOOP
+function createRow(fiveEntries) {
+
+    const parentContainer = document.querySelector('.row-container'); 
+    if (!parentContainer) return;
+
+
+    for (let i = 0; i < homeEntries.length; i++) {
+        const row = document.createElement('div');
+        
+        row.classList.add("row-container", "main-row", `row-con${i}`);
+        
+        if (i % 2 === 0) {
+            row.classList.add(`row${i}-left`);
+        } 
+        else {
+            row.classList.add(`row${i}-right`);
+        }
+
+        createElements(row, i);
+        parentContainer.appendChild(row);
+    }
 };
 
 function createElements (row,index) {
@@ -50,6 +90,21 @@ function createElements (row,index) {
 };
 
 createRow(homeEntries);
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
