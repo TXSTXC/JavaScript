@@ -3,51 +3,31 @@ const homePageEntries = JSON.parse(localStorage.getItem('userEntries')) || [];
 const homeEntries = homePageEntries.slice(-4).reverse();
 console.log("Entries loaded on the Home Page:", homeEntries);
 
-//Grab rows for assignment
 
-
-//wipe all of the custom tile elements
-//refresh them with the latest homeEntries array items
-//Class per tile 'row-con{i] left / right (for loop to generate the latest {i}?)
-
-const tileSelectors = ['.row0-l', '.row0-r', '.row1-l', '.row1-r', '.row2'];
+const tileSelectors = ['.row0-l', '.row0-r', '.row1-l', '.row1-r'];
 
 function populateEntries() {
     homeEntries.forEach((entry, index) => {
-        // Find the specific tile container using its unique class
+
         const tile = document.querySelector(tileSelectors[index]);
 
         if (tile && entry) {
-            // 1. Target the date paragraph (the first <p> inside the tile)
+            
             const datePara = tile.querySelector('p');
             if (datePara) datePara.innerText = entry.date || '';
-
-            // 2. Target the subject heading
             const heading = tile.querySelector('h2');
             if (heading) heading.innerText = entry.subject || '';
-
-            // 3. Target the description paragraph
             const descPara = tile.querySelector('.entry-para');
             if (descPara) descPara.innerText = entry.description || '';
         }
     });
-}
+};
 
 populateEntries();
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*
+** OLD CODE **
 
 // 3 ROW / ENTRY CREATION FUNCTION USING A FOR LOOP
 function createRow(fiveEntries) {
@@ -92,28 +72,11 @@ function createElements (row,index) {
 createRow(homeEntries);
 
 
-*/
 
+------------------------------------------------
 
+** OLD OLD CODE **
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 const placeholderRow = document.querySelector('.placeholder');
 
 const createRow = (indx) => {
