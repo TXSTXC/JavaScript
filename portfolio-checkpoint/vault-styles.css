@@ -49,3 +49,25 @@
 .tile-row{
 
 }
+
+@media (max-width: 768px) {
+    .main-container{
+        width: 90%;
+    }
+    .row-container{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .main-row-70, .main-row-30{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container{
+        width: 95%;
+    }
+    .row-container{
+        gap: 15px;
+    }
+}

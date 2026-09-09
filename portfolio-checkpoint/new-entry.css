@@ -93,3 +93,21 @@
 .gap-10{
     gap:10px;
 }
+
+@media (max-width: 768px) {
+    .form-container{
+        width: 90%;
+    }
+    .entryDesc{
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container{
+        width: 95%;
+    }
+    .entryDesc{
+        min-height: 300px;
+    }
+}
