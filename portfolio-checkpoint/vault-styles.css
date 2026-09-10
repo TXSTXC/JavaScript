@@ -1,6 +1,4 @@
-body{
-    padding:20px;
-}
+
 .main-container{
     width: 60%;
     display: flex;
@@ -60,6 +58,10 @@ body{
 
 
 @media (max-width: 768px) {
+    body{
+        padding:20px;
+        padding-top: 0px;
+    }
     .main-container{
         width: 90%;
     }
@@ -85,4 +87,8 @@ body{
     .main-upper{
         width: 100%;
     }
+    body{
+        padding:20px;
+        padding-top: 0px;
+    }    
 }
