@@ -11,6 +11,10 @@ entryForm.addEventListener('submit', (event) =>{
     const entrySubject = document.getElementById('entrySubject').value;
     const entryDesc = document.getElementById('entryDesc').value;
     const dateTime = new Date();
+    if (!entrySubject || !entryDesc) {
+        alert("Please fill in both the subject and description fields.");
+        return;
+    }
 
     //Captures time for me
     const formattedDate = dateTime.toLocaleDateString('en-UK', { 
