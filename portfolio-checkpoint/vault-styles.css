@@ -1,3 +1,6 @@
+body{
+    padding:20px;
+}
 .main-container{
     width: 60%;
     display: flex;
@@ -17,6 +20,10 @@
 .main-lower{
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+.main-lower > div{
+    box-sizing: border-box;
 }
 .tile-container{
     display: flex;
@@ -26,6 +33,7 @@
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 25px;
+    width: 80%;
 }
 .tile-container:hover{
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)
@@ -50,6 +58,7 @@
 
 }
 
+
 @media (max-width: 768px) {
     .main-container{
         width: 90%;
@@ -61,6 +70,9 @@
     .main-row-70, .main-row-30{
         width: 100%;
     }
+    .main-upper{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -69,5 +81,8 @@
     }
     .row-container{
         gap: 15px;
+    }
+    .main-upper{
+        width: 100%;
     }
 }

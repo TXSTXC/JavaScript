@@ -110,6 +110,9 @@ p{
     border-radius: 8px;
     margin-bottom: 50px;
 }
+.row-container > div > div{
+    box-sizing: border-box;
+}
 .main-row-70{
     width:70%;
     min-width: 0;
