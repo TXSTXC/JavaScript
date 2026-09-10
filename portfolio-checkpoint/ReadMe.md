@@ -17,6 +17,7 @@ I also then had to .reverse the Array as it was storing everything in the wrong 
 Initially I had set up a huge overcomplicated amount of code to dynamically create each element. This was split by Row, and each row having a Left and Right element container. It quickly got difficult to understand and hard to read.
 I recoded this, with a slightly more optimal flow, where I was relying less on multiple for loops and more on assigning values based on mathematical logic. It was still difficult to read and understand.
 I then realised that as the elements are static, I can just map the correct index and entry to the relevant location. So I did this...
+
 <img width="467" height="361" alt="Screenshot 2026-09-10 125120" src="https://github.com/user-attachments/assets/0be3db6f-b120-42f4-8bfa-3b5c1d6bfa2d" />
 
 Funnily enough, I was actually able to reuse some of my older code that was set up to dynamically create elements on the 'Vault' page as it was already looping through. All I had to do was update the Arrays and classes within the Javascript and it was already done.
