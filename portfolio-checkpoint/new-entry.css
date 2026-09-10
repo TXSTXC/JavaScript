@@ -1,3 +1,6 @@
+body{
+    padding:20px;
+}
 .form-container{
     display:flex;
     flex-direction: column;
@@ -101,6 +104,20 @@
     .entryDesc{
         min-height: 400px;
     }
+}
+.entry-bottom{
+    flex-direction: column;
+    gap: 20px;
+}
+.entrySubject::placeholder{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d0d2db8c;
+}
+.entryDesc::placeholder{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d0d2db8c;
 }
 
 @media (max-width: 480px) {
