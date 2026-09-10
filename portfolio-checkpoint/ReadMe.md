@@ -23,3 +23,6 @@ I then realised that as the elements are static, I can just map the correct inde
 Funnily enough, I was actually able to reuse some of my older code that was set up to dynamically create elements on the 'Vault' page as it was already looping through. All I had to do was update the Arrays and classes within the Javascript and it was already done.
 I copied my code across and it worked first time, which surprised me.
 
+<img width="446" height="583" alt="Screenshot 2026-09-10 125351" src="https://github.com/user-attachments/assets/2e5cdce5-d502-43bd-b116-f7487391c663" />
+
+
