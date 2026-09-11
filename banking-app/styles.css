@@ -138,8 +138,11 @@ body{
 .history-list{
     height: 100%;
     display:flex;
-    gap:15px;
+    gap:10px;
     padding-left: 10px;
+}
+ul{
+    line-height: 3;
 }
 .deposit-ui{
     display:flex;

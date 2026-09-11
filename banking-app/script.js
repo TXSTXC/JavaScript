@@ -10,13 +10,25 @@
 // - Add the amount to the balance
 // - Update the balance on the page
 // - Close the deposit UI
-const userAccount = {
-    name: "Luke Varga",
-    accountNumber: "12345678",
-    sortCode: "12-34-56",
-    balance: 0,
-    history: [],
-};
+
+class BankAccount {
+    constructor(name, accountNumber, sortCode, balance = 0, history=[]) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.sortCode = sortCode;
+        this.balance = balance;
+        this.history = history;
+    }
+}
+
+
+const userAccount = new BankAccount(
+    "Luke Varga", 
+    "12345678", 
+    "12-34-56",
+    "0",
+    "[]"
+);
 
 const userName = document.getElementById('user-name');
 userName.textContent = userAccount.name; //NULL?
@@ -104,7 +116,10 @@ cancelTransferBtn.addEventListener('click', () => {
 //Event Listener for Depositing Money
 submitTransferBtn.addEventListener('click', () => {
     const transferAmount = parseFloat(transferInput.value);
-    if(transferAmount > 0 && transferAmount >=10000){
+    if (transferAmount > userAccount.balance){
+        alert("You do not have enough funds to make this transfer.")
+    }
+    else if(transferAmount > 0 && transferAmount >=10000){
         alert("Please contact branch1 for larger desposit amounts.")
     }
     else if(transferAmount > 0 && transferAmount < 10000){
@@ -146,9 +161,8 @@ function displayHistory() {
         const sign = transaction.amount >= 0 ? '+' : '-';
         const amount = Math.abs(transaction.amount);
         transactionLine.textContent =
-            `${sign} £${amount.toFixed(2)} || ${transaction.detail}`;
+            `${sign} £${amount.toFixed(2)} || ${transaction.detail} - ${transaction.date}`;
         userHistory.appendChild(transactionLine);
-        transactionLine.appendChild(transactionDate);
     });
 }
 
