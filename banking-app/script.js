@@ -1,21 +1,24 @@
+const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
+const enteredName = localStorage.getItem('userName');
+const enteredPassword = localStorage.getItem('userPassword');
 
-const homePageEntries = JSON.parse(localStorage.getItem('userAccounts'));
+// Declare at top level so everything below can access them
+const userAccount = userAccounts.find(
+    account => account.name === enteredName && account.password === enteredPassword
+);
 
-
-//LOGIC to populate the page with user data.
-const userAccount = userAccounts.find(account => account.name === "Luke Varga")
-
-//ACCOUNT DETAILS
-const userName = document.getElementById('user-name');
-userName.textContent = userAccount.name; //NULL?
-const userAccountNumber = document.getElementById('user-account-number');
-userAccountNumber.textContent = userAccount.accountNumber;
-const userSortCode = document.getElementById('user-sort-code');
-userSortCode.textContent = userAccount.sortCode;
 const userBalance = document.getElementById('user-balance');
-userBalance.textContent = `£${userAccount.balance}`;
-
 const userHistory = document.getElementById('user-history');
+
+if (!userAccount) {
+    console.error('No matching account found.');
+} else {
+    document.getElementById('user-name').textContent = userAccount.name;
+    document.getElementById('user-account-number').textContent = userAccount.accountNumber;
+    document.getElementById('user-sort-code').textContent = userAccount.sortCode;
+    userBalance.textContent = `£${userAccount.balance}`;
+};
+
 //Need to have a function that clears and refreshes the array here.
 
 //*** DEPOSIT UI ***
@@ -35,7 +38,7 @@ cancelDepositBtn.addEventListener('click', ()=>{
     document.querySelector('.deposit-ui').classList.add('hidden');
     depositInput.value = '';
     depositDetail.value = '';
-})
+});
 
 //Event Listener for Depositing Money
 submitDepositBtn.addEventListener('click', () => {
@@ -49,7 +52,7 @@ submitDepositBtn.addEventListener('click', () => {
         document.querySelector('.deposit-ui').classList.add('hidden');
 
         const dateToday = Date.now();
-        //Creates Object for a new Transaction Line and pushed into User History Array
+        //Creates Object for a new Transaction Line and pushed into UserAccount History Array
         userAccount.history.push(
             new CreateTransactionLine(
                 dateToday,
@@ -101,7 +104,7 @@ submitTransferBtn.addEventListener('click', () => {
         document.querySelector('.transfer-ui').classList.add('hidden');
 
         const dateToday = Date.now();
-        //Creates Object for a new Transaction Line and pushed into User History Array
+        //Creates Object for a new Transaction Line and pushed into UserAccount History Array
         userAccount.history.push(
             new CreateTransactionLine(
                 dateToday,
@@ -118,8 +121,6 @@ submitTransferBtn.addEventListener('click', () => {
         alert("Please enter a valid amount.")
     }
 });
-
-
 
 function displayHistory() {
 

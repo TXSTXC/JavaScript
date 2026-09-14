@@ -11,17 +11,6 @@ class BankAccount {
     }
 }
 
-/*tester account to use for now...
-const userAccount = new BankAccount(
-    "Luke Varga",
-    "Password123",
-    "12345678", 
-    "12-34-56",
-    "0",
-    "[]"
-);
-*/
-
 const userAccounts = [];
 
 //account number generator function
@@ -82,6 +71,7 @@ loginBtn.addEventListener('click', () => {
     else{
         userAccounts.forEach(account => {
             if(account.name === enteredName && account.password === enteredPassword){
+                localStorage.setItem('userName', enteredName);
                 window.location.href = 'index.html';
             }
         });
