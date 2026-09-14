@@ -1,44 +1,17 @@
 
+const homePageEntries = JSON.parse(localStorage.getItem('userAccounts'));
 
 
-//What do I want to happen...
-//Click deposit button and the UI appears.
-//Type into the number field the amount ot deposit.
+//LOGIC to populate the page with user data.
+const userAccount = userAccounts.find(account => account.name === "Luke Varga")
 
-
-//Press Submit and this will then:
-// - Add the amount to the balance
-// - Update the balance on the page
-// - Close the deposit UI
-
-class BankAccount {
-    constructor(name, accountNumber, sortCode, balance = 0, history=[]) {
-        this.name = name;
-        this.accountNumber = accountNumber;
-        this.sortCode = sortCode;
-        this.balance = balance;
-        this.history = history;
-    }
-}
-
-
-const userAccount = new BankAccount(
-    "Luke Varga", 
-    "12345678", 
-    "12-34-56",
-    "0",
-    "[]"
-);
-
+//ACCOUNT DETAILS
 const userName = document.getElementById('user-name');
 userName.textContent = userAccount.name; //NULL?
-
 const userAccountNumber = document.getElementById('user-account-number');
 userAccountNumber.textContent = userAccount.accountNumber;
-
 const userSortCode = document.getElementById('user-sort-code');
 userSortCode.textContent = userAccount.sortCode;
-
 const userBalance = document.getElementById('user-balance');
 userBalance.textContent = `£${userAccount.balance}`;
 
