@@ -39,7 +39,7 @@ createAccountBtn.addEventListener('click', () => {
     if(fullName.value === '' || password.value === ''){
         alert("Please fill in all fields to create an account.");
         return;
-    }
+    };
 
     const accountNumber = generateAccNum();
     const sortCode = generateSortCode();
@@ -69,10 +69,15 @@ loginBtn.addEventListener('click', () => {
     }
     else{
         userAccounts.forEach(account => {
-            if(account.name === enteredName && account.password === enteredPassword){
-                localStorage.setItem('userName', enteredName);
-                window.location.href = 'accounts-page.html';
-            }
-        });
+                if(account.name === enteredName && account.password === enteredPassword){
+                    localStorage.setItem('userName', enteredName);
+                    localStorage.setItem('userPassword', enteredPassword);
+                    window.location.href = 'accounts-page.html';
+                }
+                else{
+                        alert("Invalid username or password.");
+                        return;
+                }
+            });
     }
 });

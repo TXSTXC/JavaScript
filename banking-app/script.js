@@ -7,6 +7,7 @@ const userAccount = userAccounts.find(
     account => account.name === enteredName && account.password === enteredPassword
 );
 
+
 const userBalance = document.getElementById('user-balance');
 const userHistory = document.getElementById('user-history');
 
@@ -18,6 +19,7 @@ if (!userAccount) {
     document.getElementById('user-sort-code').textContent = userAccount.sortCode;
     userBalance.textContent = `£${userAccount.balance}`;
 };
+
 
 //Need to have a function that clears and refreshes the array here.
 
