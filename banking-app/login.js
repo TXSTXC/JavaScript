@@ -7,7 +7,7 @@ class BankAccount {
         this.accountNumber = accountNumber;
         this.sortCode = sortCode;
         this.balance = balance;
-        this.history = history;
+        this.history = [];
     }
 }
 

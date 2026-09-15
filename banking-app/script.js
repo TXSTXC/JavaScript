@@ -62,6 +62,7 @@ submitDepositBtn.addEventListener('click', () => {
                 depositDetail.value
             )
         )
+        localStorage.setItem('userAccounts', JSON.stringify(userAccounts));
         displayHistory();
         //CLears the UI for deposits
         depositInput.value = '';
@@ -114,6 +115,7 @@ submitTransferBtn.addEventListener('click', () => {
                 transferDetail.value
             )
         )
+        localStorage.setItem('userAccounts', JSON.stringify(userAccounts));
         displayHistory();
         //CLears the UI for deposits
         transferInput.value = '';
