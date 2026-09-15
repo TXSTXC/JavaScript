@@ -2,18 +2,17 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100dvh;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #072853;
+    height:100%;
 }
 .main-container{
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    gap:20px;
     height: 90%;
-    width:80%;
-    border-radius: 20px;
 }
 .upper-con{
     display:flex;
@@ -21,12 +20,13 @@ body{
     align-items: center;
     justify-content:center;
     border: 1px lightgrey solid;
-    margin-top: 20px;
     background-color: white;
-    width: 100%;
+    width: 900px;
+    height:430px;
+    border-radius: 20px;
 }
 #vault-image{
-    width:50%;
+    width:70%;
     border-radius: 20px;
 }
 .lower-con{
@@ -36,7 +36,9 @@ body{
     justify-content:center;
     border: 1px lightgrey solid;
     background-color: white;
-    width: 100%;
+    width: 900px;
+    height:430px;
+    border-radius: 30px;
 }
 #app-image{
     width: 20%;
