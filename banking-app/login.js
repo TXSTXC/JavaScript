@@ -1,4 +1,4 @@
-const homePageEntries = JSON.parse(localStorage.getItem('userAccounts')) || [];
+const userAccounts = JSON.parse(localStorage.getItem('userAccounts')) || [];
 
 class BankAccount {
     constructor(name, password, accountNumber, sortCode, balance = 0, history=[]) {
@@ -11,7 +11,6 @@ class BankAccount {
     }
 }
 
-const userAccounts = [];
 
 //account number generator function
 function generateAccNum() {
