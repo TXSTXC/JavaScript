@@ -13,7 +13,7 @@ body{
     border-radius: 20px;
     margin:0 auto;
     /*background-color: #483d8b;*/
-    background-color: #072853;
+    background-image:url(./media/faded-bg.png);
     filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
     overflow:auto;
 }
@@ -26,11 +26,9 @@ body{
     background-color: #eeeeee;
 }
 .logo{
-    width:100%;
+    width:85%;
     height: 100%;
     background-image: url(./media/bank-logo.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 .user-icon{
     width: 15%;
