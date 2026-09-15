@@ -71,7 +71,7 @@ loginBtn.addEventListener('click', () => {
         userAccounts.forEach(account => {
             if(account.name === enteredName && account.password === enteredPassword){
                 localStorage.setItem('userName', enteredName);
-                window.location.href = 'index.html';
+                window.location.href = 'accounts-page.html';
             }
         });
     }
