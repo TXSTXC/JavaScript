@@ -98,7 +98,7 @@ submitTransferBtn.addEventListener('click', () => {
         alert("You do not have enough funds to make this transfer.")
     }
     else if(transferAmount > 0 && transferAmount >=10000){
-        alert("Please contact branch1 for larger desposit amounts.")
+        alert("Please contact branch for larger desposit amounts.")
     }
     else if(transferAmount > 0 && transferAmount < 10000){
         userAccount.balance -= transferAmount;
@@ -127,7 +127,7 @@ submitTransferBtn.addEventListener('click', () => {
 function displayHistory() {
 
     userHistory.innerHTML = '';
-    userAccount.history.forEach(transaction => {
+    userAccount.history.slice().reverse().forEach(transaction => {
         console.log(transaction);
         const transactionLine = document.createElement('li');
         const transactionDate = document.createElement('span');
