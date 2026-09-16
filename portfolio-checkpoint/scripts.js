@@ -43,7 +43,7 @@ entryForm.addEventListener('submit', (event) =>{
      console.log(userEntries);
 
      
-     homeEntries = entryList.slice(-5).reverse(); //Had to Google this as (0,5) was always giving me the first 5, not the last 5.
+     homeEntries = entryList.slice(-4).reverse(); //Had to Google this as (0,4) was always giving me the first 4, not the last 4.
      localStorage.setItem('homeEntryList', JSON.stringify(homeEntries))
      //homeEntries = JSON.parse(localStorage.getItem("homeEntryList"));
      console.log(homeEntries);

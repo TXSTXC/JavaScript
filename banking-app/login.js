@@ -67,17 +67,18 @@ loginBtn.addEventListener('click', () => {
         alert("Please fill in all fields to login.");
         return;
     }
-    else{
-        userAccounts.forEach(account => {
-                if(account.name === enteredName && account.password === enteredPassword){
-                    localStorage.setItem('userName', enteredName);
-                    localStorage.setItem('userPassword', enteredPassword);
-                    window.location.href = 'accounts-page.html';
-                }
-                else{
-                        alert("Invalid username or password.");
-                        return;
-                }
-            });
+    else {
+        const matchingAccount = userAccounts.find(account =>
+            account.name === enteredName && account.password === enteredPassword
+        );
+
+        if (matchingAccount) {
+            localStorage.setItem('userName', enteredName);
+            localStorage.setItem('userPassword', enteredPassword);
+            window.location.href = 'accounts-page.html';
+        } else {
+            alert("Invalid username or password.");
+            return;
+        }
     }
 });
