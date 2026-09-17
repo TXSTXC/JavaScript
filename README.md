@@ -6,7 +6,7 @@ Vault ReadMe: https://github.com/TXSTXC/JavaScript/tree/main/portfolio-checkpoin
 
 Banking APP ReadMe: https://github.com/TXSTXC/JavaScript/tree/main/banking-app
 
-Blog Entry: https://hashnode.com/edit/cmu4a0qwy00000agm85m20ssl
+Blog Entry: [https://hashnode.com/edit/cmu4a0qwy00000agm85m20ssl](https://portfolio-project.hashnode.dev/javascript-portfolio-project)
 
 YouTube Walkthrough: https://youtu.be/WcK51-GrPro
 
